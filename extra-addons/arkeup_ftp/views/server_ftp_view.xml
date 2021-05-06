@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="server_ftp_form_view" model="ir.ui.view">
+      <field name="name">server.ftp.form.view</field>
+      <field name="model">server.ftp</field>
+      <field name="arch" type="xml">
+        <form string="Server FTP">
+          <header>
+            <button name="button_check_connection" string="Test Connection" type="object" class="btn-primary"/>
+          </header>
+          <sheet>
+            <div class="oe_title">
+              <label for="name"/>
+              <h1>
+                <field name="name" placeholder="Server FTP Name"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <field name="url"/>
+                <field name="port"/>
+                <field name="login"/>
+                <field name="password" password="True"/>
+              </group>
+              <group>
+                <field name="filename"/>
+                <field name="active"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="server_ftp_tree_view" model="ir.ui.view">
+      <field name="name">server.ftp.tree.view</field>
+      <field name="model">server.ftp</field>
+      <field name="arch" type="xml">
+        <tree string="Server FTP">
+          <field name="name"/>
+          <field name="login"/>
+          <field name="port"/>
+          <field name="password" password="True"/>
+          <field name="active"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="server_ftp_search_view" model="ir.ui.view">
+      <field name="name">server.ftp.search.view</field>
+      <field name="model">server.ftp</field>
+      <field name="arch" type="xml">
+        <search string="Server FTP">
+          <field name="name"/>
+          <field name="login"/>
+          <group expand="1" string="Group By"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="server_ftp_act_window" model="ir.actions.act_window">
+      <field name="name">Servers FTP</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">server.ftp</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          There is no examples click here to add new ModelTitle.
+        </p>
+      </field>
+    </record>
+
+    <menuitem name="Servers FTP"
+              id="server_ftp_menu"
+              sequence="4"
+              parent="base.menu_custom"
+              action="server_ftp_act_window"/>
+  </data>
+</odoo>

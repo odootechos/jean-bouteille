@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+  <data noupdate="1">
+
+    <record id="import_template_reception_delivery" model="ir.model.import.template">
+      <field name="name">Import Reception/Delivery template</field>
+      <field name="model_id" ref="stock.model_stock_picking"/>
+      <field name="method">schedule_delivery_reception_process</field>
+      <field name="is_remote_import">True</field>
+      <field name="export_xls">True</field>
+      <field name="server_ftp_id" ref="jbo_impex.server_ftp_jeanbouteille"/>
+      <field name="sequence">-1</field>
+      <field name="new_thread" eval="False"/>
+    </record>
+
+    <record id="import_template_reception_delivery" model="ir.model.import.template">
+      <field name="method_args" eval="{'template_id': ref('jbo_impex.import_template_reception_delivery')}"/>
+    </record>
+
+    <function name="create_cron" model="ir.model.import.template" eval="[[ref('import_template_reception_delivery')]]"/>
+
+  </data>
+</odoo>

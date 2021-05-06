@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_edi_export_user,edi.export.user,jean-bouteille_profile.model_export_edi_file,jean-bouteille_profile.group_edi_manager,1,0,0,0
+access_edi_export_manager,edi.export.manager,jean-bouteille_profile.model_export_edi_file,base.group_user,1,1,1,1

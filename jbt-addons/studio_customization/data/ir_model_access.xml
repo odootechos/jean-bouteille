@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record context="{'studio': True}" model="ir.model.access" id="sale_subscription.access_product_template_sale_subscription_manager">
+    <field eval="True" name="active"/>
+    <field ref="sale_subscription.group_sale_subscription_manager" name="group_id"/>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">product.template.sale.subscription.manager</field>
+    <field eval="False" name="perm_create"/>
+    <field eval="True" name="perm_read"/>
+    <field eval="False" name="perm_unlink"/>
+    <field eval="True" name="perm_write"/>
+  </record>
+</odoo>

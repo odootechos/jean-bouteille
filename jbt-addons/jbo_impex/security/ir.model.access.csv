@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+error_history_all,ErrorHistoryAccess ,jbo_impex.model_error_history,base.group_user,1,1,1,1

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <record id="ir_model_export_template_view_form_inherit" model="ir.ui.view">
+      <field name="name">ir.model.export.template.view.form.inherit</field>
+      <field name="model">ir.model.export.template</field>
+      <field name="inherit_id" ref="smile_impex.view_export_template_form"/>
+      <field name="arch" type="xml">
+        <field name="unique" position="after">
+          <button name="download_export" string="Download" type="object" class="oe_highlight"/>
+          <field name="path" invisible="1" options="{'reload_on_button': True}"/>
+          <field name="filename" invisible="1" options="{'reload_on_button': True}"/>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2020 Subteno-it
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo noupdate="1">
+    <record id="ir_config_parameter_report_url" model="ir.config_parameter">
+        <field name="key">report.url</field>
+        <field name="value">http://0.0.0.0:8069</field>
+    </record>
+</odoo>

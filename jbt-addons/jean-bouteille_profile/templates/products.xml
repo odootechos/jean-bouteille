@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="JB_product_template" inherit_id="website_sale.products" name="JB Product Grid">
+        <xpath expr="//div[@id='products_grid']" position="replace">
+            <div class="col-lg-12" id="products_grid">
+                <table width="100%">
+                    <tbody>
+                        <tr t-ignore="true">
+                            <td t-foreach="range(0,rows)" t-as="row" t-attf-width="#{100/rows}%"></td>
+                        </tr>
+                        <tr t-foreach="bins" t-as="tr_product">
+                            <t t-foreach="tr_product" t-as="td_product">
+                                <t t-if="td_product">
+                                    <t t-set="product" t-value="td_product['product']" />
+                                    <td t-att-colspan="td_product['x'] != 1 and td_product['x']" t-att-rowspan="2" t-attf-class="oe_product oe_grid oe-height-4 #{ td_product['class'] }">
+                                        <div class="oe_product_cart" t-att-data-publish="product.website_published and 'on' or 'off'">
+                                            <t t-set="product_image_big" t-value="td_product['x']+td_product['y'] &gt; 2" />
+                                            <t t-call="website_sale.products_item" />
+                                        </div>
+                                    </td>
+                                </t>
+                                <td t-if="not td_product" class="oe-height-4" />
+                            </t>
+                        </tr>
+                    </tbody>
+                </table>
+                <t t-if="not bins">
+                    <div class="text-center text-muted oe_product">
+                        <h3 class="css_editable_display mt8">No product defined.</h3>
+                        <t t-if="search">
+                            <p>
+                                No results found for "<strong t-esc='search'/>".
+                            </p>
+                        </t>
+                        <p groups="sales_team.group_sale_manager">Click <i>'New'</i> in the top-right corner to create your first product.</p>
+                    </div>
+                </t>
+            </div>
+        </xpath>
+    </template>
+</odoo>

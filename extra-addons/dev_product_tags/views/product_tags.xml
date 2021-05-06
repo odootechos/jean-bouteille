@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015 DevIntelle Consulting Service Pvt.Ltd (<http://www.devintellecs.com>).
+
+For Module Support : devintelle@gmail.com  or Skype : devintelle
+ -->
+<odoo>
+    <!--Tree-->
+	<record id="dev_tree_product_tags" model="ir.ui.view">
+		<field name="name">dev.tree.product.tags</field>
+		<field name="model">product.tags</field>
+		<field name="arch" type="xml">
+		    <tree string="Product Tags Tree" editable="bottom">
+                <field name="name"/>
+ 		    </tree>
+		</field>
+	</record>
+      <record id="dev_action_product_tags_filter" model="ir.ui.view">
+          <field name="name">Product Tags.select</field>
+          <field name="model">product.tags</field>
+          <field name="arch" type="xml">
+              <search string="Search Move">
+                  <field name="name"/>
+                  <filter string="Name" name="name_filter" domain="[('name', 'ilike', self)]"/>
+                  <group expand="0" string="Group By">
+                      <filter string="Name" name="name" domain="[]" context="{'group_by': 'name'}"/>
+                  </group>
+              </search>
+          </field>
+      </record>  
+	<!--Action-->
+  <record id="dev_action_product_tags" model="ir.actions.act_window">
+    <field name="name">Product Tags</field>
+    <field name="res_model">product.tags</field>
+    <field name="view_mode">tree,form</field>    
+    <field name="view_id" ref="dev_tree_product_tags"/>
+    <field name="search_view_id" ref="dev_action_product_tags_filter"/>
+  </record>
+    <!--Menu-->
+ 	<menuitem name ="Product Tags"
+              id='menu_product_tags'
+              parent="sale.product_menu_catalog"
+              action="dev_action_product_tags"
+              sequence="3"
+              groups="dev_product_tags.group_product_tags_manager"/>
+</odoo>

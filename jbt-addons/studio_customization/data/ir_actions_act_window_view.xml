@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record context="{'studio': True}" model="ir.actions.act_window.view" id="hr_timesheet.act_hr_timesheet_line_view_form">
+    <field ref="hr_timesheet.act_hr_timesheet_line" name="act_window_id"/>
+    <field name="sequence">1</field>
+    <field ref="hr_timesheet.hr_timesheet_line_form" name="view_id"/>
+    <field name="view_mode">form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window.view" id="hr_timesheet.act_hr_timesheet_line_view_tree">
+    <field ref="hr_timesheet.act_hr_timesheet_line" name="act_window_id"/>
+    <field eval="False" name="sequence"/>
+    <field ref="hr_timesheet.hr_timesheet_line_tree" name="view_id"/>
+    <field name="view_mode">tree</field>
+  </record>
+</odoo>

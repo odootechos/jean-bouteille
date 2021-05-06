@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* arkeup_ftp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-16 16:30+0000\n"
+"PO-Revision-Date: 2020-07-16 16:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,help:arkeup_ftp.field_server_ftp__filename
+msgid "Complete remote path of the file to be downloaded"
+msgstr "Chemin d'accès complet du fichier à télécharger"
+
+#. module: arkeup_ftp
+#: code:addons/arkeup_ftp/models/server_ftp.py:0
+#, python-format
+msgid "Connection Test Succeeded!"
+msgstr "Test de connexion réussi!"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: arkeup_ftp
+#: code:addons/arkeup_ftp/models/server_ftp.py:0
+#, python-format
+msgid "Everything seems properly set up!"
+msgstr "Tout semble bien configuré!"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__filename
+msgid "Filename"
+msgstr "Nom de fichier"
+
+#. module: arkeup_ftp
+#: model_terms:ir.ui.view,arch_db:arkeup_ftp.server_ftp_search_view
+msgid "Group By"
+msgstr "Groupé par"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__id
+msgid "ID"
+msgstr "ID"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__login
+msgid "Login"
+msgstr "Login"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__password
+msgid "Password"
+msgstr "Mot de passe"
+
+#. module: arkeup_ftp
+#: model:ir.model,name:arkeup_ftp.model_server_ftp
+#: model_terms:ir.ui.view,arch_db:arkeup_ftp.server_ftp_form_view
+#: model_terms:ir.ui.view,arch_db:arkeup_ftp.server_ftp_search_view
+#: model_terms:ir.ui.view,arch_db:arkeup_ftp.server_ftp_tree_view
+msgid "Server FTP"
+msgstr "Serveur FTP"
+
+#. module: arkeup_ftp
+#: model_terms:ir.ui.view,arch_db:arkeup_ftp.server_ftp_form_view
+msgid "Server FTP Name"
+msgstr "Nom de serveur ftp"
+
+#. module: arkeup_ftp
+#: model:ir.actions.act_window,name:arkeup_ftp.server_ftp_act_window
+#: model:ir.ui.menu,name:arkeup_ftp.server_ftp_menu
+msgid "Servers FTP"
+msgstr "Serveurs FTP"
+
+#. module: arkeup_ftp
+#: model_terms:ir.ui.view,arch_db:arkeup_ftp.server_ftp_form_view
+msgid "Test Connection"
+msgstr "Test de connexion"
+
+#. module: arkeup_ftp
+#: model_terms:ir.actions.act_window,help:arkeup_ftp.server_ftp_act_window
+msgid "There is no examples click here to add new ModelTitle."
+msgstr ""
+
+#. module: arkeup_ftp
+#: model:ir.model.fields,field_description:arkeup_ftp.field_server_ftp__url
+msgid "URL"
+msgstr "URL ou Hôte"
+
+#. module: arkeup_ftp
+#: code:addons/arkeup_ftp/models/server_ftp.py:0
+#, python-format
+msgid "connection established succesfully."
+msgstr "connexion établie avec succès."
+
+#. module: arkeup_ftp
+#: code:addons/arkeup_ftp/models/server_ftp.py:0
+#, python-format
+msgid "starting ftp connection ..."
+msgstr "connexion encours ..."

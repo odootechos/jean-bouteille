@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record context="{'studio': True}" model="ir.actions.server" id="studio_customization.ajouter_jessica_en_a_415fa54f-6ff3-4144-aba4-a243f7ffe21e">
+    <field eval="False" name="binding_model_id"/>
+    <field name="binding_type">action</field>
+    <field eval="[(6, 0, [])]" name="child_ids"/>
+    <field name="code"><![CDATA[# Available variables:
+#  - env: Odoo Environment on which the action is triggered
+#  - model: Odoo Model of the record on which the action is triggered; is a void recordset
+#  - record: record on which the action is triggered; may be void
+#  - records: recordset of all records on which the action is triggered in multi-mode; may be void
+#  - time, datetime, dateutil, timezone: useful Python libraries
+#  - log: log(message, level='info'): logging function to record debug information in ir.logging table
+#  - Warning: Warning Exception to use with raise
+# To return an action, assign: action = {...}
+
+
+
+]]></field>
+    <field eval="False" name="crud_model_id"/>
+    <field eval="False" name="help"/>
+    <field eval="False" name="link_field_id"/>
+    <field ref="hr_holidays.model_hr_leave_allocation" name="model_id"/>
+    <field name="name">Ajouter Jessica en abonné</field>
+    <field name="sequence">5</field>
+    <field name="state">followers</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.server" id="studio_customization.ajouter_jessica_en_a_48e451e1-25f4-4d3e-a3d7-6771b06a20f6">
+    <field eval="False" name="binding_model_id"/>
+    <field name="binding_type">action</field>
+    <field eval="[(6, 0, [])]" name="child_ids"/>
+    <field name="code"><![CDATA[# Available variables:
+#  - env: Odoo Environment on which the action is triggered
+#  - model: Odoo Model of the record on which the action is triggered; is a void recordset
+#  - record: record on which the action is triggered; may be void
+#  - records: recordset of all records on which the action is triggered in multi-mode; may be void
+#  - time, datetime, dateutil, timezone: useful Python libraries
+#  - log: log(message, level='info'): logging function to record debug information in ir.logging table
+#  - Warning: Warning Exception to use with raise
+# To return an action, assign: action = {...}
+
+
+
+]]></field>
+    <field eval="False" name="crud_model_id"/>
+    <field eval="False" name="help"/>
+    <field eval="False" name="link_field_id"/>
+    <field ref="hr_holidays.model_hr_leave" name="model_id"/>
+    <field name="name">Ajouter Jessica en abonné</field>
+    <field name="sequence">5</field>
+    <field name="state">followers</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.server" id="studio_customization.reservation_de_la_sa_c199c474-c7f6-4815-91cb-a3327d3a08b7">
+    <field eval="False" name="binding_model_id"/>
+    <field name="binding_type">action</field>
+    <field eval="[(6, 0, [])]" name="child_ids"/>
+    <field name="code"><![CDATA[# Available variables:
+#  - env: Odoo Environment on which the action is triggered
+#  - model: Odoo Model of the record on which the action is triggered; is a void recordset
+#  - record: record on which the action is triggered; may be void
+#  - records: recordset of all records on which the action is triggered in multi-mode; may be void
+#  - time, datetime, dateutil, timezone: useful Python libraries
+#  - log: log(message, level='info'): logging function to record debug information in ir.logging table
+#  - Warning: Warning Exception to use with raise
+# To return an action, assign: action = {...}
+
+
+
+]]></field>
+    <field eval="False" name="crud_model_id"/>
+    <field eval="False" name="help"/>
+    <field eval="False" name="link_field_id"/>
+    <field ref="project.model_project_task" name="model_id"/>
+    <field name="name">Réservation de la salle 213</field>
+    <field name="sequence">5</field>
+    <field name="state">next_activity</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.server" id="studio_customization.ajouter_jessica_en_a_c8cd4561-ad8b-46eb-86f1-1562f08a2657">
+    <field eval="False" name="binding_model_id"/>
+    <field name="binding_type">action</field>
+    <field eval="[(6, 0, [])]" name="child_ids"/>
+    <field name="code"><![CDATA[# Available variables:
+#  - env: Odoo Environment on which the action is triggered
+#  - model: Odoo Model of the record on which the action is triggered; is a void recordset
+#  - record: record on which the action is triggered; may be void
+#  - records: recordset of all records on which the action is triggered in multi-mode; may be void
+#  - time, datetime, dateutil, timezone: useful Python libraries
+#  - log: log(message, level='info'): logging function to record debug information in ir.logging table
+#  - Warning: Warning Exception to use with raise
+# To return an action, assign: action = {...}
+
+
+
+]]></field>
+    <field eval="False" name="crud_model_id"/>
+    <field eval="False" name="help"/>
+    <field eval="False" name="link_field_id"/>
+    <field ref="hr_holidays.model_hr_leave" name="model_id"/>
+    <field name="name">Ajouter Jessica en abonné</field>
+    <field name="sequence">5</field>
+    <field name="state">followers</field>
+  </record>
+</odoo>

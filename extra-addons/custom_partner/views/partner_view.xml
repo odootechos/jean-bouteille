@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="custom_partner.partner_form_view">
+      <field name="name">Custom product form view</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+	  
+        <field name="function" position="after">
+          <field name="fax" widget="phone"/>
+        </field>
+        <field name="website" position="after">
+          <field name="facebook_url" widget="url"/>
+        </field>
+        <field name="vat" position="after">
+          <field name="partner_network_id" placeholder="Network"/>
+          <field name="sale_code"/>
+          <field name="purchase_code"/>          
+        </field>
+		<field name="street" position="replace">
+			<field name="street" placeholder="Street..." class="o_address_street" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" required="1"/>
+		</field>
+		<field name="city" position="replace">
+			<field name="city" placeholder="City" class="o_address_city" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" required="1"/>
+		</field>
+		<field name="zip" position="replace">
+			<field name="zip" placeholder="ZIP" class="o_address_zip" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" required="1"/>
+		</field>			
+		<field name="phone" position="replace">				
+			<field name="phone" widget="phone" required="1"/>
+		</field>
+		
+      </field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="hr_timesheet.act_hr_timesheet_line">
+    <field name="name">Mes feuilles de temps</field>
+    <field name="res_model">account.analytic.line</field>
+    <field name="view_mode">tree,form,grid</field>
+    <field name="domain">[('project_id', '!=', False), ('user_id', '=', uid)]</field>
+    <field name="context">{
+                "search_default_week":1,
+            }</field>
+    <field ref="hr_timesheet.hr_timesheet_line_search" name="search_view_id"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                Enregistrer une nouvelle activité
+              </p><p>
+                Vous pouvez enregistrer et suivre vos heures de travail par projet
+et par jour. Chaque temps passé sur un projet deviendra un coût dans
+le compte analytique/contrat et pourra être re-facturé au client
+si nécessaire.
+              </p>
+            ]]></field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="stock.action_picking_tree_ready">
+    <field name="context">{
+                    'search_default_picking_type_id': [active_id],
+                    'default_picking_type_id': active_id,
+                    'contact_display': 'partner_address',
+                    'search_default_available': 1,
+            }
+            </field>
+    <field eval="False" name="domain"/>
+    <field eval="False" name="filter"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                Définissez un nouveau transfert
+              </p>
+            ]]></field>
+    <field name="name">À faire</field>
+    <field name="res_model">stock.picking</field>
+    <field ref="stock.view_picking_internal_search" name="search_view_id"/>
+    <field name="view_mode">tree,kanban,form,calendar,graph</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="studio_customization.activite_564d71ea-de66-4c56-a7b1-cb3327c0bcfc">
+    <field name="context">{}</field>
+    <field eval="False" name="domain"/>
+    <field eval="False" name="filter"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                        This is your new action ; by default, it contains a list view and a form view.
+                    </p>
+                    <p>
+                        You can start customizing these screens by clicking on the Studio icon on the
+                        top right corner (you can also customize this help message there).
+                    </p>
+                ]]></field>
+    <field name="name">activité</field>
+    <field name="res_model">mail.activity</field>
+    <field eval="False" name="search_view_id"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="studio_customization.activites_e30cd4eb-c268-43fa-8187-42929f1287fd">
+    <field name="context">{}</field>
+    <field eval="False" name="domain"/>
+    <field eval="False" name="filter"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                        This is your new action ; by default, it contains a list view and a form view.
+                    </p>
+                    <p>
+                        You can start customizing these screens by clicking on the Studio icon on the
+                        top right corner (you can also customize this help message there).
+                    </p>
+                ]]></field>
+    <field name="name">Activités</field>
+    <field name="res_model">mail.activity.type</field>
+    <field eval="False" name="search_view_id"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="studio_customization.transferts_45b84960-d304-42e0-ad1b-5372bb2cac80">
+    <field name="context">{'search_default_partner_id': active_id,'default_partner_id': active_id}</field>
+    <field name="domain">[('partner_id', '=', active_id)]</field>
+    <field eval="False" name="filter"/>
+    <field eval="False" name="help"/>
+    <field name="name">Transferts</field>
+    <field name="res_model">stock.picking</field>
+    <field eval="False" name="search_view_id"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="studio_customization.type_activites_bb725baa-54f2-4401-8b1e-64b44f0ffe44">
+    <field name="context">{}</field>
+    <field eval="False" name="domain"/>
+    <field eval="False" name="filter"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                        This is your new action ; by default, it contains a list view and a form view.
+                    </p>
+                    <p>
+                        You can start customizing these screens by clicking on the Studio icon on the
+                        top right corner (you can also customize this help message there).
+                    </p>
+                ]]></field>
+    <field name="name">type activités</field>
+    <field name="res_model">mail.activity.type</field>
+    <field eval="False" name="search_view_id"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="studio_customization.type_d_activite_5f4941b5-b67b-4ebc-b6db-67c46a5da891">
+    <field name="context">{}</field>
+    <field eval="False" name="domain"/>
+    <field eval="False" name="filter"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                        This is your new action ; by default, it contains a list view and a form view.
+                    </p>
+                    <p>
+                        You can start customizing these screens by clicking on the Studio icon on the
+                        top right corner (you can also customize this help message there).
+                    </p>
+                ]]></field>
+    <field name="name">Type d'activité</field>
+    <field name="res_model">mail.activity.type</field>
+    <field eval="False" name="search_view_id"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="studio_customization.type_d_activite_bfa20b3e-9d0c-4005-aa89-3e0edf459b06">
+    <field name="context">{}</field>
+    <field eval="False" name="domain"/>
+    <field eval="False" name="filter"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                        This is your new action ; by default, it contains a list view and a form view.
+                    </p>
+                    <p>
+                        You can start customizing these screens by clicking on the Studio icon on the
+                        top right corner (you can also customize this help message there).
+                    </p>
+                ]]></field>
+    <field name="name">Type d'activité</field>
+    <field name="res_model">mail.activity.type</field>
+    <field eval="False" name="search_view_id"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.act_window" id="studio_customization.type_d_activite_e70d288c-542a-453a-9c4b-2f6fab114d0a">
+    <field name="context">{}</field>
+    <field eval="False" name="domain"/>
+    <field eval="False" name="filter"/>
+     <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                        This is your new action ; by default, it contains a list view and a form view.
+                    </p>
+                    <p>
+                        You can start customizing these screens by clicking on the Studio icon on the
+                        top right corner (you can also customize this help message there).
+                    </p>
+                ]]></field>
+    <field name="name">type d'activité</field>
+    <field name="res_model">mail.activity.type</field>
+    <field eval="False" name="search_view_id"/>
+    <field name="view_mode">tree,form</field>
+   </record>
+</odoo>

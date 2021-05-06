@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="jb_product_views" model="ir.ui.view">
+        <field name="name">product.public.category.form</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                <field name="image_background_description" string="Description for image"/>
+            </xpath>
+            <xpath expr="//field[@name='sequence']" position="after">
+                <field name="link_background_image" string="Image Link"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

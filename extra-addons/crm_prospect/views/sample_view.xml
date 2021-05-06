@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="my_awesome_form_view" model="ir.ui.view">
+            <field name="name">VIEW_NAME</field>
+            <field name="model">MODEL_HERE</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Form view">
+                    <header>
+                        Here is button, stage...
+                    </header>
+                    <sheet>
+                        Put content here
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="my_awesome_tree_view" model="ir.ui.view">
+            <field name="name">VIEW_NAME</field>
+            <field name="model">MODEL_HERE</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree view">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

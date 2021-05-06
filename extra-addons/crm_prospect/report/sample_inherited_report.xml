@@ -1,0 +1,9 @@
+<odoo>
+	<data>
+		<template id="custom_report" inherit_id="report.name">
+			<xpath expr="//div[@class='page']" position="replace">
+				Your new awesome content !
+			</xpath>
+		</template>
+	</data>
+</odoo>

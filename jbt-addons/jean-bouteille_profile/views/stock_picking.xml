@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="generate_edi_file_sent_pickings" model="ir.actions.act_window">
+        <field name="name">Export Edi File</field>
+        <field name="res_model">export.edi.file</field>
+        <field name="view_id" ref="jean-bouteille_profile.view_export_edi_file_action_view"/>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_active_picking': active_id}</field>
+        <field name="target">new</field>
+    </record>            
+
+    <record id="view_picking_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='picking_type_id']" position="after">
+                <field name="code" string="Code" invisible="1"/>
+                <field name="state_ftp"
+                       string="State FTP"
+                       attrs="{'invisible':[('code', '=', 'internal')]}"
+                       decoration-danger="state_ftp == 'not_Sent'"
+                       decoration-success="state_ftp == 'sent'"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="vpicktree_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.tree.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="state_ftp" string="State FTP"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_cancel_reservation_pickings">
+        <field name="name">Cancel Reservations</field>
+        <field name="model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                for record in records:
+                    if record.state in ['confirmed', 'assigned']:
+                        action = record.do_unreserve()
+        </field>
+    </record>
+</odoo>

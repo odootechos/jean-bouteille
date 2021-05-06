@@ -1,0 +1,11 @@
+<odoo>
+	<data noupdate="1">
+		<record id="seq_ref_res_partner" model="ir.sequence">
+            <field name="name">Partner ref</field>
+            <field name="code">res_partner.ref</field>
+            <field name="prefix">OP</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+	</data>
+</odoo>

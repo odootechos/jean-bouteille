@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record context="{'studio': True}" model="ir.actions.report" id="studio_customization.factures_5f98f7f2-9af3-4020-accc-738e8df02c441">
+    <field name="attachment">(object.state in ('open','in_payment','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')</field>
+    <field eval="False" name="attachment_use"/>
+    <field name="model">account.move</field>
+    <field name="name">Factures Diffusion</field>
+    <field name="report_name">account.report_invoice_with_payments_copy_1</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+  <record context="{'studio': True}" model="ir.actions.report" id="studio_customization.devis_commande_ec4bc39f-16db-407e-979f-f80335869f2a">
+    <field eval="False" name="attachment"/>
+    <field eval="False" name="attachment_use"/>
+    <field name="model">sale.order</field>
+    <field name="name">Devis sans prix</field>
+    <field name="report_name">sale.report_saleorder_copy_1</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+</odoo>

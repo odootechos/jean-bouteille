@@ -1,0 +1,90 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* arkeup_impex
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-26 23:01+0000\n"
+"PO-Revision-Date: 2021-01-26 23:01+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: arkeup_impex
+#: model:ir.model.fields,field_description:arkeup_impex.field_ir_model_import_template__server_ftp_id
+msgid "Choose FTP Server"
+msgstr "Veuillez renseigner un serveur FTP"
+
+#. module: arkeup_impex
+#: model_terms:ir.ui.view,arch_db:arkeup_impex.ir_model_import_template_view_form_inherit
+msgid "Clean History"
+msgstr "Supprimer tout l'historique"
+
+#. module: arkeup_impex
+#: model:ir.model.fields,field_description:arkeup_impex.field_ir_model_import_template__attachment_ids
+msgid "Documents"
+msgstr "Documents"
+
+#. module: arkeup_impex
+#: model_terms:ir.ui.view,arch_db:arkeup_impex.ir_model_export_template_view_form_inherit
+msgid "Download"
+msgstr "Télécharger"
+
+#. module: arkeup_impex
+#: model:ir.model,name:arkeup_impex.model_ir_model_export_template
+msgid "Export Template"
+msgstr "Modèle d'export"
+
+#. module: arkeup_impex
+#: model:ir.model.fields,field_description:arkeup_impex.field_ir_model_import_template__import_file
+msgid "File"
+msgstr "Fichier"
+
+#. module: arkeup_impex
+#: model:ir.model.fields,field_description:arkeup_impex.field_ir_model_export_template__filename
+#: model:ir.model.fields,field_description:arkeup_impex.field_ir_model_import_template__file_name
+msgid "Filename"
+msgstr "Nom du fichier"
+
+#. module: arkeup_impex
+#: model:ir.model.fields,field_description:arkeup_impex.field_ir_model_import_template__export_xls
+msgid "Generate errors file"
+msgstr "Générer le fichier des erreurs"
+
+#. module: arkeup_impex
+#: model_terms:ir.ui.view,arch_db:arkeup_impex.ir_model_import_template_view_form_inherit
+msgid "History Error Files"
+msgstr "Historiques"
+
+#. module: arkeup_impex
+#: model:ir.model,name:arkeup_impex.model_ir_model_import_template
+msgid "Import Template"
+msgstr "Modèle d'import"
+
+#. module: arkeup_impex
+#: code:addons/arkeup_impex/models/ir_model_export_template.py:17
+#, python-format
+msgid "No file to download"
+msgstr "Aucun fichier à télécharger"
+
+#. module: arkeup_impex
+#: model:ir.model.fields,field_description:arkeup_impex.field_ir_model_export_template__path
+msgid "Path"
+msgstr "Chemin"
+
+#. module: arkeup_impex
+#: code:addons/arkeup_impex/models/ir_model_export_template.py:18
+#, python-format
+msgid "Please add key web.base.url.export to parameter"
+msgstr "Veuillez ajouter la clé web.base.url.export dans les paramètres systèmes"
+
+#. module: arkeup_impex
+#: model:ir.model.fields,field_description:arkeup_impex.field_ir_model_import_template__is_remote_import
+msgid "Use FTP"
+msgstr "Utilisez le serveur FTP"
+

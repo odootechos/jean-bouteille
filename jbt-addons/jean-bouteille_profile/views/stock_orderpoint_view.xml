@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+        <menuitem
+            id="stock.menu_reordering_rules_replenish"
+            action="stock.action_orderpoint_replenish"
+            name="Replenishment" parent="stock.menu_stock_warehouse_mgmt" sequence="10"/>
+    </data>
+</odoo>

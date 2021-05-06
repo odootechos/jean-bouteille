@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record context="{'studio': True}" model="base.automation" id="studio_customization.ajouter_jessica_en_a_a1731160-dd3b-4522-80ae-be7593ceae3b">
+    <field ref="studio_customization.ajouter_jessica_en_a_415fa54f-6ff3-4144-aba4-a243f7ffe21e" name="action_server_id"/>
+    <field eval="True" name="active"/>
+    <field eval="False" name="filter_domain"/>
+    <field eval="False" name="filter_pre_domain"/>
+    <field name="trigger">on_create</field>
+  </record>
+  <record context="{'studio': True}" model="base.automation" id="studio_customization.ajouter_jessica_en_a_8f05865d-476f-4fb3-a543-b78eb1030f9c">
+    <field ref="studio_customization.ajouter_jessica_en_a_48e451e1-25f4-4d3e-a3d7-6771b06a20f6" name="action_server_id"/>
+    <field eval="True" name="active"/>
+    <field eval="False" name="filter_domain"/>
+    <field eval="False" name="filter_pre_domain"/>
+    <field name="trigger">on_create</field>
+  </record>
+  <record context="{'studio': True}" model="base.automation" id="studio_customization.reservation_de_la_sa_a17881bf-0281-44ac-88af-5e2f8f5f5f29">
+    <field ref="studio_customization.reservation_de_la_sa_c199c474-c7f6-4815-91cb-a3327d3a08b7" name="action_server_id"/>
+    <field eval="True" name="active"/>
+    <field name="filter_domain">[["stage_id.name","=","Salle reservée"]]</field>
+    <field name="filter_pre_domain">[["stage_id.name","!=","Salle reservée"]]</field>
+    <field name="trigger">on_write</field>
+  </record>
+</odoo>

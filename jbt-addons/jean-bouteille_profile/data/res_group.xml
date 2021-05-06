@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="res.groups" id="group_edi_manager">
+            <field name="name">EDI Manage group</field>
+        </record>
+    </data>
+</odoo>

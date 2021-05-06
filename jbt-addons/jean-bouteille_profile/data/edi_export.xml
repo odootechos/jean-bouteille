@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2020 Subteno IT
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo noupdate="1">
+    <record id="edi_jean-bouteille_ftp_url" model="ir.config_parameter">
+        <field name="key">edi.jean-bouteille.ftp.url</field>
+        <field name="value">gtwtest.fmlogistic.biz</field>
+    </record>
+    <record id="edi_jean-bouteille_ftp_login" model="ir.config_parameter">
+        <field name="key">edi.jean-bouteille.ftp.login</field>
+        <field name="value">JeanBouteille</field>
+    </record>
+    <record id="edi_jean-bouteille_ftp_password" model="ir.config_parameter">
+        <field name="key">edi.jean-bouteille.ftp.password</field>
+        <field name="value">F76l9_fjqa78$</field>
+    </record>
+    <record id="edi_jean-bouteille_ftp_port" model="ir.config_parameter">
+        <field name="key">edi.jean-bouteille.ftp.port</field>
+        <field name="value">2121</field>
+    </record>
+    <record id="edi_jean-bouteille_ftp_path" model="ir.config_parameter">
+        <field name="key">edi.jean-bouteille.ftp.path</field>
+        <field name="value">/To_FM/</field>
+    </record>    
+</odoo>

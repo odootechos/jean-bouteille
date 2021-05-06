@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2020 Subteno IT
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <data>
+        <record id="view_company_form_inherit" model="ir.ui.view">
+            <field name="name">view.company.form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Configuration EDI FM">
+                        <group>
+                            <group>
+                                <field name="is_using_edi" string="Is Using EDI FM ?"/>
+                            </group>
+                            <group>
+                                <field name="location_fm_id"
+                                       string="Location FM"
+                                       attrs="{'required': [('is_using_edi', '=', True)],
+                                       'invisible': [('is_using_edi','=',False)]}"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

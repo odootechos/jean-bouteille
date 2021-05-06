@@ -1,0 +1,143 @@
+<odoo>
+
+    <!--    <record id="view_order_form_inherit" model="ir.ui.view">-->
+    <!--        <field name="name">sale.order.form.inherit</field>-->
+    <!--        <field name="model">sale.order</field>-->
+    <!--        <field name="inherit_id" ref="sale.view_order_form"/>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <xpath expr="//header" position="replace">-->
+    <!--            </xpath>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <record id="view_order_tree_jb_inherit" model="ir.ui.view">
+        <field name="name">sale.order.tree.jb.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="replace">
+                <tree string="Sales Orders" decoration-bf="message_needaction==True" decoration-muted="state=='cancel'">
+                    <field name="close_order" invisible="1"/>
+                    <field name="message_needaction" invisible="1"/>
+                    <field name="name" string="Order Number"/>
+                    <field name="commitment_date" optional="hide"/>
+                    <field name="expected_date" optional="hide"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="amount_total" sum="Total Tax Included" widget="monetary"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="invoice_status" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                </tree>
+            </xpath>
+        </field>
+    </record>
+    <!--Inherit quotations search view-->
+    <record id="view_sale_order_inherit_search" model="ir.ui.view">
+        <field name="name">sale.order.search.expand.filter</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_sale"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="close_order"/>
+                <separator/>
+                <filter string="Orders Open" name="order_open" domain="[('close_order', '=', False)]"/>
+                <separator/>
+            </xpath>
+        </field>
+    </record>
+    <!--Inherit sale order view-->
+    <record id="view_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.view.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="replace">
+                <header>
+                    <field name="close_order" invisible="1"/>
+                    <field name="authorized_transaction_ids" invisible="1"/>
+                    <button name="payment_action_capture" type="object"
+                            string="Capture Transaction" class="oe_highlight"
+                            attrs="{'invisible': [('authorized_transaction_ids', '=', [])]}"/>
+                    <button name="payment_action_void" type="object"
+                            string="Void Transaction"
+                            confirm="Are you sure you want to void the authorized transaction? This action can't be undone."
+                            attrs="{'invisible': [('authorized_transaction_ids', '=', [])]}"/>
+                    <button name="action_quotation_send"
+                            string="Send by Email"
+                            type="object"
+                            attrs="{'invisible': ['|',('state', '!=', 'draft'),('close_order', '=', True)]}"
+                            class="btn-primary"/>
+                    <button name="action_quotation_send"
+                            type="object"
+                            string="Send PRO-FORMA Invoice"
+                            groups="sale.group_proforma_sales"
+                            class="btn-primary"
+                            attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('invoice_count','&gt;=',1)]}"
+                            context="{'proforma': True}"/>
+                    <button name="action_confirm" id="action_confirm"
+                            string="CONFIRM" class="btn-primary" type="object"
+                            attrs="{'invisible': [('state', 'not in', ['sent'])]}"/>
+                    <button name="action_confirm"
+                            string="CONFIRM" type="object"
+                            attrs="{'invisible': [('state', 'not in', ['draft'])]}"/>
+                    <button name="preview_sale_order" type="object" string="PREVIEW"/>
+                    <button name="%(sale.action_view_sale_advance_payment_inv)d"
+                            string="Create Invoice"
+                            type="action"
+                            class="btn-primary"
+                            attrs="{'invisible': [('invoice_status', 'not in', ['to invoice', 'not to invoice'])]}"/>
+                    <button name="%(sale.action_view_sale_advance_payment_inv)d"
+                            string="Create Invoice"
+                            type="action"
+                            context="{'default_advance_payment_method': 'percentage'}"
+                            attrs="{'invisible': ['|', ('invoice_status', '!=', 'no'), ('state', '!=', 'sale')]}"/>
+                    <button name="action_quotation_send"
+                            type="object"
+                            string="Send PRO-FORMA Invoice"
+                            groups="sale.group_proforma_sales"
+                            attrs="{'invisible': ['|',  ('state', '=', 'draft'), ('invoice_count','&gt;=',1)]}"
+                            context="{'proforma': True}"/>
+                    <button name="action_quotation_send"
+                            string="Send by Email"
+                            type="object"
+                            attrs="{'invisible': [('state', 'not in', ['sent','sale'])]}"/>
+                    <button name="action_cancel" states="draft,sent,sale" type="object" string="CANCEL"/>
+                    <button name="action_draft" states="CANCEL" type="object" string="Set to Quotation"/>
+                    <button name="action_done" type="object" string="Lock" states="sale"
+                            help="If the sale is locked, you can not modify it anymore. However, you will still be able to invoice or deliver."/>
+                    <button name="close_ordering"
+                            type="object"
+                            string=" Close Order"
+                            class="fa fa-lock btn-primary"
+                            groups="sales_team.group_sale_manager"
+                            attrs="{'invisible': [('close_order', '=', True)]}"/>
+                    <button name="open_ordering"
+                            type="object"
+                            string=" Open Order"
+                            class="fa fa-unlock btn-oe_highlight"
+                            groups="sales_team.group_sale_manager"
+                            attrs="{'invisible': [('close_order', '=', False)]}"/>
+                    <button name="action_unlock" type="object" string="Unlock" states="done"
+                            groups="sales_team.group_sale_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,sent,sale, order_closed"/>
+                </header>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form/group/group/field[@name='product_id']" position="replace">
+                <field name="product_id"
+                       domain="[('active', '=', True)]"
+                       context="{'partner_id':parent.partner_id,
+                                 'quantity':product_uom_qty,
+                                 'pricelist':parent.pricelist_id,
+                                 'uom':product_uom,
+                                 'company_id': parent.company_id}"
+                       attrs="{
+                            'readonly': [('product_updatable', '=', False)],
+                            'required': [('display_type', '=', False)],
+                        }"
+                       force_save="1"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

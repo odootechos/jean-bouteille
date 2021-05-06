@@ -1,0 +1,135 @@
+/* ----------------------------------------------------------*/
+/*           CUSTOM FONTS JEAN-BOUTEILLE_PROFILE             */
+/* ----------------------------------------------------------*/
+@font-face {font-family: "Coco FY W01 Regular";
+    src: url("../fonts/Coco FY/bfdde458c3128a3ed12794f67800541d.eot"); /* IE9*/
+    src: url("../fonts/Coco FY/bfdde458c3128a3ed12794f67800541d.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Coco FY/bfdde458c3128a3ed12794f67800541d.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/Coco FY/bfdde458c3128a3ed12794f67800541d.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/Coco FY/bfdde458c3128a3ed12794f67800541d.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/Coco FY/bfdde458c3128a3ed12794f67800541d.svg#Coco FY W01 Regular") format("svg"); /* iOS 4.1- */
+  }
+  @font-face {font-family: 'NeutrafaceText-Demi';
+    src: url("../fonts/Neutra Demi/NeutrafaceText-Demi.eot"); /* IE9*/
+    src: url("../fonts/Neutra Demi/NeutrafaceText-Demi.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Neutra Demi/NeutrafaceText-Demi.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/Neutra Demi/NeutrafaceText-Demi.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/Neutra Demi/NeutrafaceText-Demi.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/Neutra Demi/NeutrafaceText-Demi.svg#NeutrafaceText-Demi") format("svg"); /* iOS 4.1- */
+  }
+  @font-face {font-family: 'NeutrafaceText-Bold';
+    src: url("../fonts/Neutra Demi Bold/NeutrafaceText-Bold.eot"); /* IE9*/
+    src: url("../fonts/Neutra Demi Bold/NeutrafaceText-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Neutra Demi Bold/NeutrafaceText-Bold.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/Neutra Demi Bold/NeutrafaceText-Bold.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/Neutra Demi Bold/NeutrafaceText-Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/Neutra Demi Bold/NeutrafaceText-Bold.svg#NeutrafaceText-Demi") format("svg"); /* iOS 4.1- */
+  }
+  @font-face {font-family: 'PeignotLTStd-Bold';
+    src: url("../fonts/Peignot/PeignotLTStd-Bold.eot"); /* IE9*/
+    src: url("../fonts/Peignot/PeignotLTStd-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Peignot/PeignotLTStd-Bold.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/Peignot/PeignotLTStd-Bold.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/Peignot/PeignotLTStd-Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/Peignot/PeignotLTStd-Bold.svg#NeutrafaceText-Demi") format("svg"); /* iOS 4.1- */
+  }
+
+/* ----------------------------------------------------------*/
+/*           CUSTOM SCSS JEAN-BOUTEILLE_PROFILE              */
+/* ----------------------------------------------------------*/
+
+/* Product page custom SCSS  */
+#product_details > h1{
+  font-family:"PeignotLTStd-Bold";
+}
+
+.availability_messages{
+  font-family:"NeutrafaceText-Demi";
+}
+
+.o_not_editable > .text-muted{
+  font-family:"NeutrafaceText-Demi";
+}
+
+.css_quantity > .btn, #add_to_cart, .o_add_wishlist_dyn{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+.nab-tabs > .nav-item > a > b > font{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+.card-body > h3{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+.card-body > p{
+  font-family:"NeutrafaceText-Demi";
+}
+
+.oe_price{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+/* Product page custom SCSS  */
+h6{
+  font-family:"NeutrafaceText-Demi";
+}
+
+.dropdown-toggle{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+#o_shop_collapse_category{
+  font-family:"PeignotLTStd-Bold";
+}
+
+.product_price > b{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+.nav-link > h1{
+  font-family:"PeignotLTStd-Bold";
+}
+
+/* HOME PAGE */
+.navbar .navbar-expand-md .navbar-light .bg-light{
+  font-family:"PeignotLTStd-Bold";
+}
+
+.carousel-content > .s_title > .s_title_default, .lead, .carousel-content > .s_title > .s_title_default > span{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+.s_btn > .btn{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+section.s_references.bg-200.pt16.pb32{
+  font-family:"NeutrafaceText-Demi" !important;
+}
+
+.card-title > b{
+  font-family: 'NeutrafaceText-Bold';
+}
+
+.card-text .o_default_snippet_text{
+  font-family:"NeutrafaceText-Demi";
+}
+
+section.s_text_block.pb8.pt72 > .container > .row > .col-lg-4 > h5 > b{
+  font-family:"PeignotLTStd-Bold";
+}
+
+section.s_text_block.pb8.pt72 > .container > .row > .col-lg-4 > h5 > small{
+  font-family:"NeutrafaceText-Demi";
+}
+
+.container-link-image{
+  position:relative;
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

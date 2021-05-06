@@ -1,0 +1,8 @@
+<odoo>
+	<data noupdate="0">
+		<record model="ir.config_parameter" id="sirius_info">
+			<field name="key">created_by</field>
+			<field name="value">Sirius-Info</field>
+		</record>
+	</data>
+</odoo>

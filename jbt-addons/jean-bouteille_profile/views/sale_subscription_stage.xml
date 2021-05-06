@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="sale_subscription_stage_view_form_jb" model="ir.ui.view">
+            <field name="name">JB sale subscription stage </field>
+            <field name="model">sale.subscription.stage</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_stage_view_form"/>
+            <field name="arch" type="xml">
+                <field name="category" position="after">
+                    <field name="do_invoice"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

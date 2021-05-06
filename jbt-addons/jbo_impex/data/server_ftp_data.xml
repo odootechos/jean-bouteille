@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+
+    <record id="server_ftp_jeanbouteille" model="server.ftp">
+      <field name="url">gtw.fmlogistic.biz</field>
+      <field name="login">JeanBouteille</field>
+      <field name="password">F76l9_fjqa78$</field>
+      <field name="port">2021</field>
+      <field name="filename">/</field>
+    </record>
+
+  </data>
+</odoo>

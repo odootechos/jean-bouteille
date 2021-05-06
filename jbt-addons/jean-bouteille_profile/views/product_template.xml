@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="jean-bouteille_product_normal_form_view_inherits" model="ir.ui.view">
+        <field name="name">jean-bouteille.product.product.form.inherits</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='packaging_ids']" position="replace">
+                <field name="packaging_ids" nolabel="1" context="{'form_view_ref':'jean-bouteille_profile.jean-bouteille_product_packaging_form_view2', 'tree_view_ref':'jean-bouteille_profile.jean-bouteille_product_packaging_tree_view2'}"/>                
+            </xpath>
+            <xpath expr="//page[@name='inventory']/group/group/div[@name='volume']" position="after">
+                <label for="icpe_code"/>
+                <div class="o_row" name="icpe_code">
+                    <field name="icpe_code" string="ICPE Code"/>
+                </div>
+                <label for="gross_weight"/>
+                <div class="o_row" name="gross_weight">
+                    <field name="gross_weight" string="GROSS WEIGHT"/>
+                    <span>Kg</span>
+                </div>
+                <label for="height"/>
+                <div class="o_row" name="height">
+                    <field name="height" string="Heigth"/>
+                    <span>cm</span>
+                </div>
+                <label for="width"/>
+                <div class="o_row" name="width">
+                    <field name="width" string="WIDTH"/>
+                    <span>cm</span>
+                </div>
+                <label for="depth"/>
+                <div class="o_row" name="depth">
+                    <field name="depth" string="Depth"/>
+                    <span>cm</span>
+                </div>                
+            </xpath>
+        </field>
+    </record>
+    <record id="get_edi_file" model="ir.actions.act_window">
+        <field name="name">Export Edi Items</field>
+        <field name="res_model">export.edi.file</field>
+        <field name="view_id" ref="jean-bouteille_profile.view_export_edi_file_action_view"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

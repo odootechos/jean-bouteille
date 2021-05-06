@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record context="{'studio': True}" model="ir.ui.menu" id="studio_customization.comptabilite_type_d__7254ce4d-a92d-4bc5-aca6-2f6f3cc8afbe">
+    <field ref="studio_customization.type_d_activite_bfa20b3e-9d0c-4005-aa89-3e0edf459b06" name="action"/>
+    <field eval="True" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">Type d'activité</field>
+    <field ref="account.menu_finance_configuration" name="parent_id"/>
+    <field name="sequence">5</field>
+    <field eval="False" name="web_icon"/>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.menu" id="studio_customization.ventes_activites_b8f78b63-93f7-48a8-b8f3-8d3bcf6aaefd">
+    <field ref="studio_customization.activites_e30cd4eb-c268-43fa-8187-42929f1287fd" name="action"/>
+    <field eval="False" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">Activités</field>
+    <field ref="sale.sale_menu_root" name="parent_id"/>
+    <field name="sequence">10</field>
+    <field eval="False" name="web_icon"/>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.menu" id="studio_customization.ventes_type_d_activi_03b08018-64fc-4af4-bae5-2a4ad742c6c7">
+    <field ref="studio_customization.type_d_activite_e70d288c-542a-453a-9c4b-2f6fab114d0a" name="action"/>
+    <field eval="False" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">type d'activité</field>
+    <field ref="sale.sale_menu_root" name="parent_id"/>
+    <field name="sequence">10</field>
+    <field eval="False" name="web_icon"/>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.menu" id="studio_customization.ventes_activite_22a77431-4b53-43a8-9316-ad2d57e6386d">
+    <field ref="studio_customization.activite_564d71ea-de66-4c56-a7b1-cb3327c0bcfc" name="action"/>
+    <field eval="False" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">activité</field>
+    <field ref="sale.sale_menu_root" name="parent_id"/>
+    <field name="sequence">10</field>
+    <field eval="False" name="web_icon"/>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.menu" id="studio_customization.ventes_type_activite_772c1759-8766-4c9c-ac9a-364c6cc2ba2c">
+    <field ref="studio_customization.type_activites_bb725baa-54f2-4401-8b1e-64b44f0ffe44" name="action"/>
+    <field eval="True" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">type activités</field>
+    <field ref="sale.menu_sale_config" name="parent_id"/>
+    <field eval="False" name="sequence"/>
+    <field eval="False" name="web_icon"/>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.menu" id="studio_customization.assistance_type_d_ac_ea408e39-8c2b-4ea9-af65-681b7ad5621a">
+    <field ref="studio_customization.type_d_activite_5f4941b5-b67b-4ebc-b6db-67c46a5da891" name="action"/>
+    <field eval="True" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">Type d'activité</field>
+    <field ref="helpdesk.helpdesk_menu_config" name="parent_id"/>
+    <field eval="False" name="sequence"/>
+    <field eval="False" name="web_icon"/>
+  </record>
+</odoo>

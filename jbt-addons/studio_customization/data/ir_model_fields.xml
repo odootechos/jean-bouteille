@@ -1,0 +1,1570 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record model="ir.model.fields" id="studio_customization.new_priorite_mail_ac_0dfc4e19-7065-4009-b368-0371dec2d31c">
+    <field name="domain">[]</field>
+    <field name="field_description">New Priorité</field>
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">mail.activity.type</field>
+    <field ref="mail.model_mail_activity_type" name="model_id"/>
+    <field name="name">x_studio_field_XtpUp</field>
+    <field eval="True" name="selectable"/>
+    <field name="selection">[['0', 'Normal'], ['1', 'Low'], ['2', 'High'], ['3', 'Very High']]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_mrp_bo_d0bdf564-07c2-42e1-98da-3852af35007e">
+    <field name="domain">[]</field>
+    <field name="field_description">Type de produit</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">mrp.bom</field>
+    <field ref="mrp.model_mrp_bom" name="model_id"/>
+    <field name="name">x_studio_field_YdxYS</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["Oublong","Oublong"],["Gravity","Gravity"],["Présentoir","Présentoir"],["Micro-station","Micro-station"],["Bouteille/Bocal","Bouteille/Bocal"],["Liquide","Liquide"],["Easy","Easy"],["Echantillon","Echantillon"],["Contre Etiquette","Contre Etiquette"],["ILV","ILV Gravity/Présentoir"],["ILV Easy","ILV Easy"],["Bulk for brands","Bulk for brands"],["Module aide/impression","Module aide/impression"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_helpde_ba602323-c8e3-4938-992c-3cdaac7e2fd7">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Type de résolution</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_type_de_rsolution</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["Résolution téléphonique","Résolution téléphonique"],["Intervention JB","Intervention JB"],["Intervention ARECO","Intervention ARECO"],["Intervention Open Bar","Intervention Open Bar"],["Intervention autre","Intervention autre"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_date_helpdesk_ti_4cae55d4-66f8-4718-8df0-7162e798cd43">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Date d'intervention</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_date_dintervention</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">date</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_decimal_h_7ed3962a-0749-440b-8d3a-1339f4ef8d3e">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Temps d'intervention</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_temps_dintervention</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">float</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.abonnement_helpdesk__1f738749-cce3-465d-90ce-0454e362b7c5">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Abonnement</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_jdPSD</field>
+    <field name="on_delete">set null</field>
+    <field eval="False" name="readonly"/>
+    <field eval="False" name="related"/>
+    <field name="relation">sale.subscription</field>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">many2one</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_helpde_ca63e75e-5633-4e6a-b40a-c6d1e1c96947">
+
+    <field name="domain">[]</field>
+    <field name="field_description">New Champ lié</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_eMY16</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="True" name="readonly"/>
+    <field name="related">x_studio_field_jdPSD.partner_id.name</field>
+    <field eval="False" name="relation"/>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_mrp_pr_f36e888c-79e0-4e30-ae54-4dbc233c864c">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Version</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">mrp.production</field>
+    <field ref="mrp.model_mrp_production" name="model_id"/>
+    <field name="name">x_studio_version</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="True" name="readonly"/>
+    <field name="related">bom_id.code</field>
+    <field eval="False" name="relation"/>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_hr_ef926509-e32b-4226-8e01-9d2367be6512">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Vérifié par Lucien</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">hr.expense</field>
+    <field ref="hr_expense.model_hr_expense" name="model_id"/>
+    <field name="name">x_studio_vrifi_par_lucien</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_produc_aa723d96-ca27-4f5e-82b8-7c8eda92a498">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Certification</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_certification</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["COSMOS ORGANIC","COSMOS ORGANIC"],["ECODETERGENT","ECODETERGENT ECOCERT"],["Agriculture Biologique FR-BIO-01","Agriculture Biologique FR-BIO-01"],["Nature et Progrès","Nature et Progrès"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_html_mrp_bom_a392c0cd-2dd4-4d5f-8dcc-5280ebcc7065">
+
+    <field name="domain">[]</field>
+    <field name="field_description">New Html</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">mrp.bom</field>
+    <field ref="mrp.model_mrp_bom" name="model_id"/>
+    <field name="name">x_studio_field_BcjDc</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">html</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.filename_for_x_studi_a439c61f-0f22-4655-9324-45f41d0dddb5">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Filename for x_studio_field_v9e2S</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">mrp.bom</field>
+    <field ref="mrp.model_mrp_bom" name="model_id"/>
+    <field name="name">x_studio_field_v9e2S_filename</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_helpde_78f3caed-eef3-44bd-8608-9f6e50407b76">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Produit Concerné</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_AM3Xl</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["Lessive","Lessive JB"],["Liquide vaisselle","Liquide vaisselle JB"],["vin","vin"],["vinaigre","vinaigre"],["huile","huile"],["gel douche","gel douche"],["savon de marseille","savon de marseille"],["savon noir","savon noir"],["mutli usage","mutli usage Jb"],["assouplissant","assouplissant JB"],["Produit Aroma Zone","Produit Aroma Zone"],["produite Ecover","produite Ecover"],["Lessive Biocoop","Lessive Biocoop"],["Multi usage Biocoop","Multi usage Biocoop"],["Assouplissant Biocoop","Assouplissant Biocoop"],["Liquide vaisselle Biocoop","Liquide vaisselle Biocoop"],["Shampoing douche Biocoop","Shampoing douche Biocoop"],["Shampoing crème biocoop","Shampoing crème biocoop"],["Crème lavante surgras Biocoop","Crème lavante surgras Biocoop"],["savon mains biocoop","savon mains biocoop"],["gel douche corps biocoop","gel douche corps biocoop"],["Lessive Etamine du Lys","Lessive Etamine du Lys"],["Assouplissant Etamine du Lys","Assouplissant Etamine du Lys"],["Savon douche Garrigue","Savon douche Garrigue"],["Aroma Zone- Ricin","Aroma Zone- Ricin"],["Aroma Zone - Base Shampoing","Aroma Zone - Base Shampoing"],["Aroma Zone - Base lavante","Aroma Zone - Base lavante"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_helpde_d3aaea42-c9d2-4f7a-8dda-1bdd694f4357">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Rue 1</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_rue_1</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="True" name="readonly"/>
+    <field name="related">partner_id.street</field>
+    <field eval="False" name="relation"/>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_helpde_e1d57248-e936-45e4-b169-95d2650f5575">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Rue 2</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_rue_2</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="True" name="readonly"/>
+    <field name="related">partner_id.street2</field>
+    <field eval="False" name="relation"/>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_helpde_9210cb28-3bea-45e3-ba7d-fc567763a3ea">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Code postale</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_code_postale</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="True" name="readonly"/>
+    <field name="related">partner_id.zip</field>
+    <field eval="False" name="relation"/>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_helpde_a0a6d915-7f3f-4f5b-aaf9-03681591531d">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Ville</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_ville</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="True" name="readonly"/>
+    <field name="related">partner_id.city</field>
+    <field eval="False" name="relation"/>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_helpde_012be612-30bd-4f31-bab1-65b67d358a60">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Pays</field>
+
+    <field name="help"><![CDATA[The full name of the country.]]></field>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_pays</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="True" name="readonly"/>
+    <field name="related">partner_id.country_id.name</field>
+    <field eval="False" name="relation"/>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="True" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_hr_con_36057f67-d797-4b27-8305-330f10e5e7fa">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Type de contrat</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">hr.contract</field>
+    <field ref="hr_contract.model_hr_contract" name="model_id"/>
+    <field name="name">x_studio_type_de_contrat</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["CDI","CDI"],["CDD","CDD"],["Interim","Interim"],["Stage","Stage"],["Alternance","Alternance"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_date_temps_accou_e9eb05e2-ae45-433a-86ed-a282acf9f684">
+
+    <field name="domain">[]</field>
+    <field name="field_description">New Date &amp; Temps</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">account.analytic.line</field>
+    <field ref="analytic.model_account_analytic_line" name="model_id"/>
+    <field name="name">x_studio_field_KaHR3</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">datetime</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_date_temps_proje_1fdc1b9c-4e12-4886-ba63-da36499d3a48">
+
+    <field name="domain">[]</field>
+    <field name="field_description">New Date &amp; Temps</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">project.task</field>
+    <field ref="project.model_project_task" name="model_id"/>
+    <field name="name">x_studio_field_upRIo</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">datetime</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_date_project_tas_e8b2a887-ab0e-4f28-9c2b-11dd098ea306">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Date </field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">project.task</field>
+    <field ref="project.model_project_task" name="model_id"/>
+    <field name="name">x_studio_date</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">date</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_res_pa_f85804da-7449-428d-9a0b-80af8091d088">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Equipement</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">res.partner</field>
+    <field ref="base.model_res_partner" name="model_id"/>
+    <field name="name">x_studio_equipement</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["Oui","Oui"],["Non","Non"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_product_te_11a75ceb-6078-47df-8d53-29362230d470">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Informations techniques</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_informations_techniques</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_99984917-fe34-4dfe-948c-dfef749023de">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Description supplémentaire</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_description_supplmentaire</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_a407613e-eb92-45d2-9807-9819d7b04460">
+
+    <field name="domain">[]</field>
+    <field name="field_description">New Case à cocher</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_field_8UNWm</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_produc_41d90d6d-d12a-4203-a270-e7e6c0b06b11">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Type d'article (complément)</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_field_DpjSZ</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["Produit liquide","Produit liquide"],["Contenant fini","Contenant"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_decimal_p_ce3e4779-67db-4e3c-abd7-40a11c846088">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Densité</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_densit</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">float</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_decimal_p_d608f71b-bfd1-4257-af22-a336311c48ac">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Viscosité</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_viscosit</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">float</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_2a657ce1-12bd-4b32-ba26-54ba607d3d00">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Compatible présentoir</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_compatible_prsentoir</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_1fab33b4-e7b3-4e85-9456-6765f6572eac">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Compatible Easy</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_field_compatible_easy</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_d3bacb5f-5022-4e8b-806b-c58542290807">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Compatible Gravity</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_field_compatible_gravity</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_0c52bb5f-5553-4f80-a7bd-c0496425a7a4">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Compatible Gravité Simple</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_compatible_gravit_simple</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_produc_ff0ef951-0c4b-4590-b634-68b8f420a4c4">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Format article (Produit Liquide)</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_format_article_liquide</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["BIDON 5L","BIDON 5L"],["BIB 5L CARRE","BIB 5L CARRE"],["BIB 5L SLIM","BIB 5L SLIM"],["BIB 10L CARRE","BIB 10L CARRE"],["BIB 10L SLIM","BIB 10L SLIM"],["BIDON 10L","BIDON 10L"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_produc_7ba1fa70-b710-4354-b09d-2af8987c15ae">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Conseil de service/robinet</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_robinet</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["PAS DE ROBINET NECESSAIRE","PAS DE ROBINET NECESSAIRE"],["CONNECTEUR VOP/VITOP","CONNECTEUR VOP/VITOP ou MAXIFLOW"],["MAXIFLOW","MAXIFLOW"],["CUVE EN VERRE","CUVE EN VERRE"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_produc_135f842e-b799-46f1-be57-622efcef20a3">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Statut</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_statut</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["NOUVEAU","NOUVEAU"],["PERMANENT","PERMANENT"],["DEREFERENCEMENT","DEREFERENCEMENT"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_product_te_d2209688-d05f-4bee-ab06-80b25cdbbb80">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Famille de produit</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_famille_de_produit</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_decimal_p_c83db6e8-e4eb-43e2-a757-72ec86234ac7">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Indication prix de cession au L </field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_indication_prix_de_cession_au_l</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">float</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_decimal_p_32facce4-f5fb-4e59-b2c2-409d3b37eb26">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Prix de vente conseillée consommateur </field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_prix_de_vente_conseille_consommateur</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">float</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_decimal_p_028bbd78-ba91-4390-ab5e-646b21567810">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Marge magasin estimée </field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_marge_magasin_estime</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">float</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_decimal_p_1dec5a0f-fb27-429f-b824-ea0606d1e2ca">
+
+    <field name="domain">[]</field>
+    <field name="field_description">TVA CONSOMMATEUR</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_tva_consommateur</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">float</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_129cfc6f-37b2-4dd4-a54b-324785c19291">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Intégré offre sponsorisé</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_intgr_offre_sponsoris</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_2286397c-f1e4-41ae-a97d-835b71329868">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Distribuée en GMS</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_distribue_en_gms</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_ec6d5ee1-5d14-454c-bb87-3025c13ad155">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Distribuée en Réseau Spé</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_distribue_en_rseau_sp</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_pr_cabea830-1e5a-4ed1-90f2-d81b527ad160">
+
+    <field name="domain">[]</field>
+    <field name="field_description">ILV Différenciées</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_ilv_diffrencies</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_2bb690fc-0b57-4e81-af51-109424bfdcb7">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Précisions distribution géographique</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_prcisions_distribution_gographique</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_7e938613-0f76-42fc-bd50-9848931fea97">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Composition</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_composition</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_product_te_8cb7072f-ed85-464e-8c0b-0156bdf11e17">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Origine</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_origine</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_9612f5e6-8b3b-4593-be63-a8a7d198f148">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Description du produit</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_description_du_produit</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_2ea95e64-2546-451e-bc35-0d6fb90ad6b7">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Allergenes</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_allergenes</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_2042c895-fa7c-448f-ad0f-fad42f16fa53">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Conseils de conservation</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_conseils_de_conservation</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_041a256d-edc6-4e83-9903-c7becb90b95b">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Conseils d'utilisation</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_conseils_dutilisation</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_product_te_ae2f5d63-87ad-47a5-a88c-a972bbe5ffdd">
+
+    <field name="domain">[]</field>
+    <field name="field_description">DDM Magasin</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_ddm_magasin</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_product_te_f7c90319-c1b8-4163-b1e4-6c9e4fcaf52a">
+
+    <field name="domain">[]</field>
+    <field name="field_description">DDM Consommateur</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_ddm_consommateur</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_ffaecc2c-7186-4dc8-a911-88c964b49415">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Note ajustement stock</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">stock.inventory</field>
+    <field ref="stock.model_stock_inventory" name="model_id"/>
+    <field name="name">x_studio_note_ajustement_stock</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_produc_d1d05c88-5d6b-48f1-84af-3c5fb303666f">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Type de robinet sur la poche</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_type_de_robinet_sur_la_poche</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["VITOP","VITOP"],["VOP","VOP"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_product_te_c9d8e6c0-ee92-4c8c-a355-d0045237bf78">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Lien fiche technique</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_lien_fiche_technique</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_multiligne_9d270115-cf04-4ee6-8be9-7f0d88147ad7">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Commentaire info commerciale</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_commentaire_info_commerciale</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">text</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_entier_pr_d96f0528-87a7-4802-bce0-1979c76ee732">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Code variable de vente</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">product.template</field>
+    <field ref="product.model_product_template" name="model_id"/>
+    <field name="name">x_studio_code_variable_de_vente</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">integer</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_nombre_entier_he_9aade11e-be8a-4747-b0c6-f81b7e40f24d">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Nombre de pièce HS (si plusieurs pièces sur un même ticket</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_nombre_de_pice_hs_si_plusieurs_pices_sur_un_mme_ticket</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">integer</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.partner_count_res_pa_4e2a739e-f07c-41a2-bf0a-bf143f7fb042">
+    <field eval="False" name="complete_name"/>
+    <field name="compute"><![CDATA[
+results = self.env['stock.picking'].read_group([('partner_id', 'in', self.ids)], 'partner_id', 'partner_id')
+dic = {}
+for x in results: dic[x['partner_id'][0]] = x['partner_id_count']
+for record in self: record['x_partner_id__stock_picking_count'] = dic.get(record.id, 0)
+]]></field>
+    <field eval="False" name="copied"/>
+    <field eval="False" name="depends"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Partner count</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">res.partner</field>
+    <field ref="base.model_res_partner" name="model_id"/>
+    <field name="name">x_partner_id__stock_picking_count</field>
+
+    <field eval="False" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="False" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">integer</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_priorite_sale_or_910988d6-4813-4f4f-a7f2-f10201f7fff1">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Niveau de priorité</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">sale.order</field>
+    <field ref="sale.model_sale_order" name="model_id"/>
+    <field name="name">x_studio_niveau_de_priorit</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["0","Normal"],["1","1 Non prioritaire"],["2","2 Projet stratégique"],["3","3 Ouverture Projet Prioritaire"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_stock__22894d15-9f4c-4500-a07c-43903256a35c">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Niveau de priorité de la commande</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">stock.picking</field>
+    <field ref="stock.model_stock_picking" name="model_id"/>
+    <field name="name">x_studio_niveau_de_priorit_de_la_commande</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="True" name="readonly"/>
+    <field name="related">sale_id.x_studio_niveau_de_priorit</field>
+    <field eval="False" name="relation"/>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["0","Normal"],["1","1 Non prioritaire"],["2","2 Projet stratégique"],["3","3 Ouverture Projet Prioritaire"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_champ_lie_stock__1daf9f20-fa9b-4e4e-8244-ca7240fac417">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Vendeur de la commande</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">stock.picking</field>
+    <field ref="stock.model_stock_picking" name="model_id"/>
+    <field name="name">x_studio_field_cy122</field>
+    <field name="on_delete">set null</field>
+    <field eval="True" name="readonly"/>
+    <field name="related">sale_id.user_id</field>
+    <field name="relation">res.users</field>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    <field eval="False" name="translate"/>
+    <field name="ttype">many2one</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_cr_e44f81d9-56c4-4969-b32b-52529792d7d2">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Demande d'inscription</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">crm.lead</field>
+    <field ref="crm.model_crm_lead" name="model_id"/>
+    <field name="name">x_studio_demande_dinscription</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_texte_helpdesk_t_4eb89c7b-0ad9-4632-9f7b-9ef5fbfb143e">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Numéro de Lot</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_numro_de_lot</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">char</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_helpde_6d60222a-e258-49fe-92da-0631a4634495">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Réf JB</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_rf_jb</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["JB0042","JB0042"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_helpde_eaf237e0-dabc-44b1-a6fa-34d247ceb1cc">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Fournisseur</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_fournisseur</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["smurfit","smurfit"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_case_a_cocher_he_90030c97-8d43-4889-ba4c-5e9d25fb40ea">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Photo?</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_photo</field>
+
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.alerte_qualite_helpd_eff718cc-a454-4636-b334-a03581a06b9f">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Alerte qualité</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_VNvZO</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="False" name="readonly"/>
+    <field eval="False" name="related"/>
+    <field name="relation">quality.alert</field>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">many2many</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.new_selection_helpde_4baebfcc-df03-4155-8c09-11a7fd4f78e6">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Action corrective</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_cKfRr</field>
+
+    <field eval="True" name="selectable"/>
+    <field name="selection">[["Emission d'avoir","Rapatriement + Emission d'avoir"],["à charge du client","à charge du client"]]</field>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.lot_serial_helpdesk__da8bcc13-91d2-4fdb-b5c7-a4299868e406">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Lot/Serial</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_SGP4T</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="False" name="readonly"/>
+    <field eval="False" name="related"/>
+    <field name="relation">stock.production.lot</field>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">many2many</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.helpdesk_ticket_help_623668e2-f9e1-4d5a-96ee-c35440878de7">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Helpdesk Ticket</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_tPIlA</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="False" name="readonly"/>
+    <field eval="False" name="related"/>
+    <field name="relation">helpdesk.ticket</field>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">many2many</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.product_helpdesk_tic_8f6ab127-87a4-4c30-8563-6f659b935e62">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Produit Concerné</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_Bbmsg</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="False" name="readonly"/>
+    <field eval="False" name="related"/>
+    <field name="relation">product.product</field>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">many2many</field>
+  </record>
+  <record model="ir.model.fields" id="studio_customization.contact_helpdesk_tic_a68aff5b-40e0-49c5-966e-b63ac3a1b155">
+
+    <field name="domain">[]</field>
+    <field name="field_description">Fournisseur</field>
+
+    <field eval="False" name="help"/>
+    <field eval="False" name="index"/>
+    <field name="model">helpdesk.ticket</field>
+    <field ref="helpdesk.model_helpdesk_ticket" name="model_id"/>
+    <field name="name">x_studio_field_9A90A</field>
+    <field eval="False" name="on_delete"/>
+    <field eval="False" name="readonly"/>
+    <field eval="False" name="related"/>
+    <field name="relation">res.partner</field>
+    <field eval="False" name="relation_field"/>
+    <field eval="False" name="required"/>
+    <field eval="True" name="selectable"/>
+    <field eval="False" name="selection"/>
+    <field eval="False" name="size"/>
+    <field name="state">manual</field>
+    <field eval="True" name="store"/>
+    
+    <field eval="False" name="translate"/>
+    <field name="ttype">many2many</field>
+  </record>
+</odoo>

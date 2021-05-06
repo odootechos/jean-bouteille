@@ -1,0 +1,52 @@
+<odoo>
+
+    <record id="purchase_order_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/field[@name='state']" position="replace">
+                <field name="state"
+                       widget="statusbar"
+                       statusbar_visible="draft,sent,purchase,order_closed"
+                       readonly="1"/>
+            </xpath>
+            <xpath expr="//header/button[@name='button_unlock']" position="after">
+                <field name="close_order" invisible="1"/>
+                <button name="close_ordering"
+                        type="object"
+                        string=" Close Order"
+                        class="fa fa-lock btn-primary"
+                        groups="purchase.group_purchase_manager"
+                        attrs="{'invisible': [('close_order', '=', True)]}"/>
+                <button name="open_ordering"
+                        type="object"
+                        string=" Open Order"
+                        class="fa fa-unlock btn-oe_highlight"
+                        groups="purchase.group_purchase_manager"
+                        attrs="{'invisible': [('close_order', '=', False)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form/group/group/field[@name='product_id']" position="replace">
+                <field name="product_id"
+                       domain="[('active', '=', True)]"
+                       context="{'partner_id': parent.partner_id}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <!--Inherit quotations search view-->
+    <record id="view_purchase_order_filter_inherit" model="ir.ui.view">
+        <field name="name">request.quotation.select.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+        <field name="arch" type="xml">
+             <xpath expr="//search" position="inside">
+                 <field name="close_order"/>
+                 <separator/>
+                 <filter string="Orders Open" name="order_open" domain="[('close_order', '=', False)]"/>
+                 <separator/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_purchase_order_pivot_inherit" model="ir.ui.view">
+        <field name="name">product.month.pivot.inherit</field>
+        <field name="model">purchase.report</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_pivot"/>
+        <field name="arch" type="xml">
+            <field name="price_total" position="after">
+                <field name="total_quantity" type="measure" string="Total Quantity"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

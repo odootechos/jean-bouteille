@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* jbo_impex
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-12 15:29+0000\n"
+"PO-Revision-Date: 2021-02-12 15:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:48
+#, python-format
+msgid "Configuration Error : NO CONFIGURATION FM was found"
+msgstr "Erreur de configuration : Aucune configuration FM n'a été trouvée."
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:52
+#, python-format
+msgid "Configuration Error : Please, Verify Configuration of Location FM"
+msgstr "Erreur de configuration : Veuillez vérifier la configuration de le l'emplacement FM"
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history__current_import_id
+#: model:ir.model.fields,field_description:jbo_impex.field_ir_model_import_template__id_current_import
+msgid "Current import"
+msgstr "Import courant"
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history__error_occured
+msgid "Error occured"
+msgstr "Erreur est survenue"
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history__id
+msgid "ID"
+msgstr "ID"
+
+#. module: jbo_impex
+#: model:ir.model,name:jbo_impex.model_ir_model_import
+msgid "Import"
+msgstr "Import"
+
+#. module: jbo_impex
+#: model:ir.model,name:jbo_impex.model_ir_model_import_template
+msgid "Import Template"
+msgstr "Modèle d'import"
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:266
+#, python-format
+msgid "Import done successfully."
+msgstr "Import réussi"
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:273
+#, python-format
+msgid "Import finish with errors. \n"
+" There is the liste of all stranded files : \n"
+" + %s \n"
+"Go to Histories tab to show the details."
+msgstr "Import des livraisons/réceptions est terminé avec des erreurs. \n"
+" Voici la liste de tous les fichiers échoués : \n"
+" + %s \n"
+"Veuillez accéder à l'onglet Historiques pour consulter les détails."
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_error_history__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:24
+#, python-format
+msgid "No FTP server found. Please fill ftp server field to continue!"
+msgstr "Aucun serveur FTP n'est définie. Veuillez renseigner le champs Serveur FTP"
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:43
+#, python-format
+msgid "No files were retrieved from the FTP server."
+msgstr "Aucun fichier n'a été récupéré à partir du serveur FTP."
+
+#. module: jbo_impex
+#: model:ir.model.fields,field_description:jbo_impex.field_ir_model_import_template__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: jbo_impex
+#: model:ir.model,name:jbo_impex.model_server_ftp
+msgid "Server FTP"
+msgstr "Serveur FTP"
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:64
+#, python-format
+msgid "Start processing file %s"
+msgstr "Traitement du fichier %s en cours ..."
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:143
+#, python-format
+msgid "Thers is an error with this picking IN %s"
+msgstr "Aucune réception avec le numéro %s n'a été trouvée dans le système."
+
+#. module: jbo_impex
+#: code:addons/jbo_impex/models/stock_picking.py:235
+#, python-format
+msgid "Thers is an error with this picking OUT %s"
+msgstr "Aucune livraison avec le numéro %s n'a été trouvée dans le système."
+
+#. module: jbo_impex
+#: model:ir.model,name:jbo_impex.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: jbo_impex
+#: model:ir.model,name:jbo_impex.model_error_history
+msgid "error.history"
+msgstr ""
+

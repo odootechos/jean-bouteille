@@ -1,0 +1,1667 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_sale_ord_248c9012-0fa2-41aa-8258-5b5042c1ccc8">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//page[@name='order_lines']/field[@name='order_line']/form/group/group/field[@name='analytic_tag_ids']" position="replace"/>
+        <xpath expr="//field[@name='partner_shipping_id']" position="after">
+          <xpath expr="//field[@name='warehouse_id']" position="move"/>
+        </xpath>
+        <xpath expr="//field[@name='sale_order_template_id']" position="after">
+          <field name="x_studio_niveau_de_priorit" widget="priority" string="Niveau de priorité" attrs="{}"/>
+        </xpath>
+        <xpath expr="//field[@name='validity_date']" position="before">
+          <xpath expr="//field[@name='user_id']" position="move"/>
+        </xpath>
+        <xpath expr="//field[@name='validity_date']" position="after">
+          <xpath expr="//field[@name='date_order']" position="move"/>
+        </xpath>
+        <xpath expr="//page[@name='order_lines']/field[@name='order_line']/tree/field[@name='analytic_tag_ids']" position="attributes">
+          <attribute name="attrs">{}</attribute>
+          <attribute name="invisible">1</attribute>
+          <attribute name="options"/>
+          <attribute name="widget"/>
+        </xpath>
+        <xpath expr="//field[@name='date_order']" position="attributes">
+          <attribute name="attrs">{"readonly": []}</attribute>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="sale.view_order_form" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">sale.order</field>
+    <field name="name">Odoo Studio: sale.order.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_sale_sub_b7c44d76-a957-4440-9dc9-67b96e88a9d6">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//form[1]/sheet[1]/div[not(@name)][3]/notebook[1]/page[1]/div[1]/field[@name='recurring_invoice_line_ids']/tree[1]" position="after">
+          <form>
+            <sheet string="Subscription Line" name="studio_sheet_1e7c98">
+              <group col="4" name="studio_group_4ed8d1">
+                <field name="product_id"/>
+                <field name="analytic_account_id"/>
+                <newline/>
+                <field name="name" colspan="4"/>
+                <newline/>
+                <field name="quantity"/>
+                <field name="uom_id"/>
+                <field name="price_unit"/>
+                <field name="discount"/>
+                <field name="price_subtotal"/>
+                <field name="product_uom_category_id" invisible="1"/>
+                <separator/>
+              </group>
+            </sheet>
+          </form>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="sale_subscription.sale_subscription_view_form" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">sale.subscription</field>
+    <field name="name">Odoo Studio: sale.subscription.form.view customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_purchase_e4a124c2-d57b-4341-8231-dd6969f4b304">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='order_line']/tree[1]/field[@name='analytic_tag_ids']" position="replace"/>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='order_line']/tree[1]/field[@name='account_analytic_id']" position="replace"/>
+        <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='currency_id']" position="after">
+          <xpath expr="//field[@name='picking_type_id']" position="move"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='order_line']/tree[1]/field[@name='taxes_id']" position="after">
+          <field name="discount"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="purchase.purchase_order_form" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">purchase.order</field>
+    <field name="name">Odoo Studio: purchase.order.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.default_activity_vie_9e5c8420-1e9a-4b2e-aef5-606db38dbf25">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <activity string="Contact"/>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">primary</field>
+    <field name="model">res.partner</field>
+    <field name="name">Default activity view for res.partner</field>
+    <field name="priority">16</field>
+    <field name="type">activity</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_sale_ord_8b93318f-0215-4d57-8ace-c9a5ddd36f5a">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='expected_date']" position="replace"/>
+        <xpath expr="//field[@name='state']" position="after">
+          <field name="activity_type_id"/>
+          <field name="activity_date_deadline"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="sale.view_quotation_tree_with_onboarding" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">sale.order</field>
+    <field name="name">Odoo Studio: sale.order.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.default_activity_vie_874f943f-4d3d-48e1-8844-2d032177e153">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <activity string="Sale Order"/>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">primary</field>
+    <field name="model">sale.order</field>
+    <field name="name">Default activity view for sale.order</field>
+    <field name="priority">16</field>
+    <field name="type">activity</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_report_p_98e777d0-5def-46bd-a46b-c28512ba3623">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[4]" position="after">
+          <div class="row">
+            <div class="col-5"/>
+            <div class="col-5 offset-2">
+              <table class="table table-sm o_report_block_total">
+                <t t-set="total_currency_id" t-value="o.env['res.currency']"/>
+                <t t-set="total_amount_total" t-value="0.0"/>
+                <t t-set="total_amount_untaxed" t-value="0.0"/>
+                <t t-set="total_amount_by_groups" t-value="None"/>
+                <tr class="border-black o_subtotal">
+                  <td>
+                    <strong>Subtotal</strong>
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="total_amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': total_currency_id}"/>
+                  </td>
+                </tr>
+                <t t-foreach="total_amount_by_groups" t-as="total_amount_by_group">
+                  <tr>
+                    <t t-if="len(total_amount_by_group) == 1 and total_amount_untaxed == total_amount_by_group[2]">
+                      <td>
+                        <span t-esc="total_amount_by_group[0]"/>
+                      </td>
+                      <td class="text-right o_price_total">
+                        <span t-esc="total_amount_by_group[3]"/>
+                      </td>
+                    </t>
+                    <t t-else="">
+                      <td>
+                        <span t-esc="total_amount_by_group[0]"/>
+                        <span>
+                          <span>on</span>
+                          <t t-esc="total_amount_by_group[4]"/>
+                        </span>
+                      </td>
+                      <td class="text-right o_price_total">
+                        <span t-esc="total_amount_by_group[3]"/>
+                      </td>
+                    </t>
+                  </tr>
+                </t>
+                <t t-if="total_amount_by_groups is None">
+                  <tr>
+                    <td>Taxes</td>
+                    <td class="text-right">
+                      <span t-esc="total_amount_total - total_amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': total_currency_id}"/>
+                    </td>
+                  </tr>
+                </t>
+                <tr class="border-black o_total">
+                  <td>
+                    <strong>Total</strong>
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="total_amount_total" t-options="{'widget': 'monetary', 'display_currency': total_currency_id}"/>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[5]/div[2]/table//t[@t-set='total_currency_id']" position="attributes">
+          <attribute name="t-value">res_company.currency_id</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[5]/div[2]/table//t[@t-set='total_amount_untaxed']" position="attributes">
+          <attribute name="t-value">o.amount_untaxed</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[5]/div[2]/table//t[@t-set='total_amount_total']" position="attributes">
+          <attribute name="t-value">o.amount_tax</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[5]/div[2]/table//t[@t-set='total_amount_by_groups']" position="attributes">
+          <attribute name="t-value"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[5]/div[2]/table//t[@t-set='total_amount_total']" position="attributes">
+          <attribute name="t-value">o.amount_total</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[5]/div[2]/table[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[5]" position="after">
+          <div class="row">
+            <div class="col-5"/>
+            <div class="col-5 offset-2">
+              <table class="table table-sm o_report_block_total">
+                <t t-set="total_currency_id" t-value="o.env['res.currency']"/>
+                <t t-set="total_amount_total" t-value="0.0"/>
+                <t t-set="total_amount_untaxed" t-value="0.0"/>
+                <t t-set="total_amount_by_groups" t-value="None"/>
+                <tr class="border-black o_subtotal">
+                  <td>
+                    <strong>Subtotal</strong>
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="total_amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': total_currency_id}"/>
+                  </td>
+                </tr>
+                <t t-foreach="total_amount_by_groups" t-as="total_amount_by_group">
+                  <tr>
+                    <t t-if="len(total_amount_by_group) == 1 and total_amount_untaxed == total_amount_by_group[2]">
+                      <td>
+                        <span t-esc="total_amount_by_group[0]"/>
+                      </td>
+                      <td class="text-right o_price_total">
+                        <span t-esc="total_amount_by_group[3]"/>
+                      </td>
+                    </t>
+                    <t t-else="">
+                      <td>
+                        <span t-esc="total_amount_by_group[0]"/>
+                        <span>
+                          <span>on</span>
+                          <t t-esc="total_amount_by_group[4]"/>
+                        </span>
+                      </td>
+                      <td class="text-right o_price_total">
+                        <span t-esc="total_amount_by_group[3]"/>
+                      </td>
+                    </t>
+                  </tr>
+                </t>
+                <t t-if="total_amount_by_groups is None">
+                  <tr>
+                    <td>Taxes</td>
+                    <td class="text-right">
+                      <span t-esc="total_amount_total - total_amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': total_currency_id}"/>
+                    </td>
+                  </tr>
+                </t>
+                <tr class="border-black o_total">
+                  <td>
+                    <strong>Total</strong>
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="total_amount_total" t-options="{'widget': 'monetary', 'display_currency': total_currency_id}"/>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[6]/div[2]/table//t[@t-set='total_amount_untaxed']" position="attributes">
+          <attribute name="t-value">o.amount_untaxed</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[6]/div[2]/table//t[@t-set='total_amount_total']" position="attributes">
+          <attribute name="t-value">o.amount_total</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[6]/div[2]/table//t[@t-set='total_currency_id']" position="attributes">
+          <attribute name="t-value">res_company.currency_id</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[6]/div[2]/table/tr[1]/td[1]/strong" position="replace">
+          <strong>Montant HT</strong>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr" position="attributes">
+          <attribute name="style" separator=";" add="background-color:#EFEFEF"/>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[1]" position="before">
+          <th>
+            <span>Référence interne</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/tr/td[1]" position="before">
+          <td>
+            <span t-field="o.product_id.default_code"/>
+          </td>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]" position="replace"/>
+        <xpath expr="/t/t/div/table/thead/tr/th[1]" position="before">
+          <th>
+            <span>Référence interne</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/tr/td[1]" position="before">
+          <td>
+            <span t-field="line.product_id.default_code"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[7]" position="after">
+          <th>
+            <span>Remise (%)</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/tr/td[7]" position="after">
+          <td>
+            <span t-field="line.discount"/>
+          </td>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="purchase.report_purchaseorder_document" name="inherit_id"/>
+    <field name="key">gen_key.384b83</field>
+    <field name="mode">extension</field>
+    <field eval="False" name="model"/>
+    <field name="name">Odoo Studio: report_purchaseorder_document customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_account__d0024b53-b2c7-473f-ac66-dac2134329df">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='user_type_id']" position="after">
+          <field name="tag_ids" widget="many2many_tags"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="account.view_account_list" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">account.account</field>
+    <field name="name">Odoo Studio: account.account.list customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_account__ed6fe3ed-d109-455f-8cfc-eaee9fdb959a">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//filter[@name='equityacc']" position="after">
+          <filter domain="[[&quot;tag_ids&quot;,&quot;ilike&quot;,&quot;Investing&quot;]]" name="studio_filter_j22wK" string="Investing Activities"/>
+          <filter domain="[[&quot;tag_ids&quot;,&quot;=&quot;,&quot;Operating Activities&quot;]]" name="studio_filter_8mAgg" string="Operating Activities"/>
+          <filter domain="[[&quot;tag_ids&quot;,&quot;=&quot;,&quot;Financing Activities&quot;]]" name="studio_filter_t74Wa" string="Financing Activities"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="account.view_account_search" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">account.account</field>
+    <field name="name">Odoo Studio: account.account.search customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_helpdesk_8836578c-34ed-465b-8e72-b4ef3a601b7d">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='display_name']" position="after">
+          <field name="create_date"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="helpdesk.helpdesk_tickets_view_tree" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">helpdesk.ticket</field>
+    <field name="name">Odoo Studio: helpdesk.ticket.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_product__32e54aec-9f94-409f-926b-b1ed0fd9bb79">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//search[1]/separator[2]" position="replace">
+          <filter domain="[[&quot;product_variant_ids.stock_move_ids&quot;,&quot;=&quot;,False]]" name="studio_filter_XQSLO" string="article sans mvmt de stock"/>
+          <separator/>
+          <filter domain="[&quot;|&quot;,[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;PF0028&quot;],[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;pf005&quot;]]" name="studio_filter_G26lh" string="Composant Tresse/regul"/>
+          <filter domain="[&quot;|&quot;,&quot;|&quot;,&quot;|&quot;,[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;M10S10&quot;],[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;pf002&quot;],[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;pf009&quot;],[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;pf004&quot;]]" name="studio_filter_we74A" string="Composant gravity et bac elec"/>
+          <filter domain="[[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;M9&quot;]]" name="studio_filter_oIbLV" string="Composant Oublong"/>
+          <filter domain="[[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;M8MI&quot;]]" name="studio_filter_oc00e" string="Composant M8MI"/>
+          <filter domain="[[&quot;bom_line_ids.bom_id&quot;,&quot;=&quot;,&quot;M13S10&quot;]]" name="studio_filter_vMmTu" string="Composant du EASY"/>
+          <filter domain="[[&quot;product_variant_ids.orderpoint_ids.active&quot;,&quot;=&quot;,True]]" name="studio_filter_A6sgM" string="Comporte une règle de réappro"/>
+        </xpath>
+        <xpath expr="//field[@name='attribute_line_ids']" position="after">
+          <field name="seller_ids"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="product.product_template_search_view" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">product.template</field>
+    <field name="name">Odoo Studio: product.template.search customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_mrp_bom__7b2897f3-1b9c-4d8d-ad24-412a057b53f7">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='company_id']" position="after">
+          <field name="x_studio_field_YdxYS" string="Type de produit"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="mrp.mrp_bom_form_view" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.bom</field>
+    <field name="name">Odoo Studio: mrp.bom.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_mrp_bom__34723d63-9332-4cee-a09a-7fe555c09bfd">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='sequence']" position="after">
+          <field invisible="1" name="x_studio_field_v9e2S_filename"/>
+        </xpath>
+        <xpath expr="//field[@name='code']" position="after">
+          <field name="x_studio_field_YdxYS"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="mrp.mrp_bom_tree_view" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.bom</field>
+    <field name="name">Odoo Studio: mrp.bom.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_mrp_bom__f1d0f1ac-0f93-43ca-847b-1e46ffc5769c">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//filter[@name='default_unit_of_measure']" position="after">
+          <filter context="{'group_by': 'x_studio_field_YdxYS'}" name="x_studio_field_YdxYS" string="Type de produit"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="mrp.view_mrp_bom_filter" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.bom</field>
+    <field name="name">Odoo Studio: mrp.bom.select customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_mail_mai_695a2b99-e0df-4bf6-9a09-1c501029ceea">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='subject']" position="after">
+          <field name="partner_ids"/>
+          <field name="partner_ids"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="mail.view_mail_tree" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">mail.mail</field>
+    <field name="name">Odoo Studio: mail.mail.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.report_invoice_with__38c86a82-3a6d-4048-8177-95ef30f8fdc7">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <t t-name="account.report_invoice_with_payments_copy_1">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-set="lang" t-value="o.user_id.lang if o.type in ('in_invoice', 'in_refund') else o.partner_id.lang"/>
+            <t t-call="account.report_invoice_document_with_payments_copy_1" t-lang="lang"/>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field name="key">account.report_invoice_with_payments_copy_1</field>
+    <field name="mode">primary</field>
+    <field eval="False" name="model"/>
+    <field name="name">report_invoice_with_payments copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.report_invoice_docum_16cbd8a8-806d-4400-a8e8-34079d476836">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <t t-name="account.report_invoice_document_with_payments_copy_1">
+        <t t-call="web.external_layout">
+          <t t-set="o" t-value="o.with_context(lang=lang)"/>
+          <t t-set="address">
+            <t t-if="o.partner_shipping_id and (o.partner_shipping_id != o.partner_id)">
+              <t t-set="information_block">
+                <div groups="sale.group_delivery_invoice_address">
+                  <strong>Shipping address:</strong>
+                  <div t-field="o.partner_shipping_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+                </div>
+              </t>
+            </t>
+            <div t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}" groups="sale.group_delivery_invoice_address"/>
+            <address t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}" groups="!sale.group_delivery_invoice_address" style="font-size: 16px; border: 1px solid black; padding: 5px;"/>
+            <div t-if="o.partner_id.vat" class="mt16"><t t-esc="o.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="o.partner_id.vat"/></div>
+          </t>
+          <div class="page">
+            <h2>
+              <span t-if="o.type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid')">Invoice</span>
+              <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+              <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+              <span t-if="o.type == 'out_refund'">Credit Note</span>
+              <span t-if="o.type == 'in_refund'">Vendor Credit Note</span>
+              <span t-if="o.type == 'in_invoice'">Vendor Bill</span>
+              <span t-field="o.number"/>
+            </h2>
+            <div id="informations" class="row mt32 mb32">
+              <div class="col-auto mw-100 mb-2" t-if="o.name" name="description">
+                <strong>Description:</strong>
+                <p class="m-0" t-field="o.name"/>
+              </div>
+              <div class="col-auto mw-100 mb-2" t-if="o.date_invoice" name="invoice_date">
+                <strong>Invoice Date:</strong>
+                <p class="m-0" t-field="o.date_invoice"/>
+              </div>
+              <div class="col-auto mw-100 mb-2" t-if="o.date_due and o.type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid')" name="due_date">
+                <strong>Due Date:</strong>
+                <p class="m-0" t-field="o.date_due"/>
+              </div>
+              <div class="col-auto mw-100 mb-2" t-if="o.origin" name="origin">
+                <strong>Source:</strong>
+                <p class="m-0" t-field="o.origin"/>
+              </div>
+              <div class="col-auto mw-100 mb-2" t-if="o.partner_id.ref" name="customer_code">
+                <strong>Customer Code:</strong>
+                <p class="m-0" t-field="o.partner_id.ref"/>
+              </div>
+              <div name="reference" class="col-auto mw-100 mb-2" t-if="o.reference">
+                <strong>Reference:</strong>
+                <p class="m-0" t-field="o.reference"/>
+              </div>
+              <div name="reference_stock_move" class="col-auto mw-100 mb-2" t-if="o.reference_stock_move">
+                <strong>Picking references:</strong>
+                <p class="m-0" t-field="o.reference_stock_move"/>
+              </div>
+              <div t-att-class="o_grid_layout" t-if="o.incoterm_id" groups="sale_stock.group_display_incoterm">
+                <strong>Incoterms:</strong>
+                <p t-field="o.incoterm_id.code"/>
+              </div>
+            </div>
+            <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
+            <table class="table table-sm o_main_table" name="invoice_line_table">
+              <thead>
+                <tr>
+                  <!-- TODO: remove in master -->
+                  <t t-set="colspan" t-value="6"/>
+                  <th class="text-left">
+                    <span>Description</span>
+                  </th>
+                  <th class="d-none text-left">
+                    <span>Source Document</span>
+                  </th>
+                  <th class="text-right">
+                    <span>Quantity</span>
+                  </th>
+                  <th t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                    <span>Unit Price</span>
+                  </th>
+                  <th t-if="display_discount" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                    <span>Disc.(%)</span>
+                    <!-- TODO: remove in master -->
+                    <t t-set="colspan" t-value="colspan+1"/>
+                  </th>
+                  <th t-attf-class="text-left {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                    <span>Taxes</span>
+                  </th>
+                  <th class="text-right">
+                    <span groups="account.group_show_line_subtotals_tax_excluded">Amount</span>
+                    <span groups="account.group_show_line_subtotals_tax_included">Total Price</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="invoice_tbody">
+                <t t-set="current_subtotal" t-value="0"/>
+                <t t-foreach="o.invoice_line_ids" t-as="line">
+                  <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                  <t t-set="current_subtotal" t-value="current_subtotal + line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                  <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                    <t t-if="not line.display_type" name="account_invoice_line_accountable">
+                      <td name="account_invoice_line_name">
+                        <span t-field="line.name"/>
+                      </td>
+                      <td class="d-none">
+                        <span t-field="line.origin"/>
+                      </td>
+                      <td class="text-right">
+                        <span t-field="line.quantity"/>
+                        <span t-field="line.uom_id" groups="uom.group_uom"/>
+                      </td>
+                      <td t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                        <span t-field="line.price_unit"/>
+                      </td>
+                      <td t-if="display_discount" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                        <span t-field="line.discount"/>
+                      </td>
+                      <td t-attf-class="text-left {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), line.invoice_line_tax_ids))"/>
+                      </td>
+                      <td class="text-right o_price_total">
+                        <span t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                        <span t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                      </td>
+                    </t>
+                    <t t-if="line.display_type == 'line_section'">
+                      <td colspan="99">
+                        <span t-field="line.name"/>
+                      </td>
+                      <t t-set="current_section" t-value="line"/>
+                      <t t-set="current_subtotal" t-value="0"/>
+                    </t>
+                    <t t-if="line.display_type == 'line_note'">
+                      <td colspan="99">
+                        <span t-field="line.name"/>
+                      </td>
+                    </t>
+                  </tr>
+                  <t t-if="current_section and (line_last or o.invoice_line_ids[line_index+1].display_type == 'line_section')">
+                    <tr class="is-subtotal text-right">
+                      <td colspan="99">
+                        <strong class="mr16">Subtotal</strong>
+                        <span t-esc="current_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                      </td>
+                    </tr>
+                  </t>
+                </t>
+              </tbody>
+            </table>
+            <div class="clearfix">
+              <div id="total" class="row">
+                <div t-attf-class="#{'col-4' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                  <table class="table table-sm">
+                    <tr class="border-black o_subtotal" style="">
+                      <td>
+                        <strong>Subtotal</strong>
+                      </td>
+                      <td class="text-right">
+                        <span t-field="o.amount_untaxed"/>
+                      </td>
+                    </tr>
+                    <t t-foreach="o.amount_by_group" t-as="amount_by_group">
+                      <tr style="">
+                        <t t-if="len(o.tax_line_ids) == 1 and o.amount_untaxed == amount_by_group[2]">
+                          <td>
+                            <span t-esc="amount_by_group[0]"/>
+                          </td>
+                          <td class="text-right o_price_total">
+                            <span t-esc="amount_by_group[3]"/>
+                          </td>
+                        </t>
+                        <t t-else="">
+                          <td>
+                            <span t-esc="amount_by_group[0]"/>
+                            <span>&amp;nbsp;<span>on</span>
+                                                        <t t-esc="amount_by_group[4]"/>
+                                                    </span>
+                          </td>
+                          <td class="text-right o_price_total">
+                            <span t-esc="amount_by_group[3]"/>
+                          </td>
+                        </t>
+                      </tr>
+                    </t>
+                    <tr class="border-black o_total">
+                      <td>
+                        <strong>Total</strong>
+                      </td>
+                      <td class="text-right">
+                        <span t-field="o.amount_total"/>
+                      </td>
+                    </tr>
+                    <t t-set="payments_vals" t-value="o._get_payments_vals()"/>
+                    <t t-foreach="payments_vals" t-as="payment_vals">
+                      <tr>
+                        <td>
+                          <i class="oe_form_field text-right oe_payment_label">Payé le <t t-esc="payment_vals['date']"/></i>
+                        </td>
+                        <td class="text-right">
+                          <span t-esc="payment_vals['amount']" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                        </td>
+                      </tr>
+                    </t>
+                    <t t-if="len(payments_vals) &gt; 0">
+                      <tr class="border-black">
+                        <td>
+                          <strong>Montant dû</strong>
+                        </td>
+                        <td class="text-right">
+                          <span t-field="o.residual"/>
+                        </td>
+                      </tr>
+                    </t>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <p t-if="o.reference">
+                        Please use the following communication for your payment : <b><span t-field="o.reference"/></b>
+                    </p>
+            <p t-if="o.sdd_paying_mandate_id">
+              <span>
+                <p>
+                        This invoice will be paid using direct debit and is only
+                        sent for informative purposes.
+                      </p>
+                <p>
+                        Please do not pay it manually, the payment will be asked to your bank to be processed
+                        automatically.
+                      </p>
+              </span>
+            </p>
+            <p t-if="o.comment" name="comment">
+              <span t-field="o.comment"/>
+            </p>
+            <p t-if="o.payment_term_id" name="payment_term">
+              <span t-field="o.payment_term_id.note"/>
+            </p>
+            <div class="row">
+      </div>
+            <div class="row">
+      </div>
+            <div class="row">
+              <div class="col">
+                <span>
+                  <p>
+                    <font style="color: rgb(0, 0, 0);">
+                      <u>R CUBE NORD</u>
+                    </font>
+                  </p>
+                  <p>
+                    <span style="color: rgb(0, 0, 0); white-space: pre-wrap;">IBAN : FR76 3000 4005 1500 0107 7465 807 / BIC : BNPAFRPPXXX</span>
+                    <br/>
+                  </p>
+                </span>
+              </div>
+            </div>
+            <p t-if="o.payment_mode_id.note">
+              <strong>Payment Mode:</strong>
+              <span t-field="o.payment_mode_id.note"/>
+            </p>
+            <t t-if="o.payment_mode_id and o.payment_mode_id.show_bank_account != 'no'">
+              <p t-foreach="o.partner_banks_to_show()" t-as="partner_bank">
+                <strong>Bank Account:</strong>
+                <t t-if="partner_bank.bank_id">
+                  <t t-esc="partner_bank.bank_id.name + ('' if not partner_bank.bank_id.bic else ' (' + partner_bank.bank_id.bic + ')')"/>
+                </t>
+                <t t-if="o.payment_mode_id.show_bank_account == 'full'">
+                  <span t-field="partner_bank.acc_number"/>
+                </t>
+                <t t-elif="o.payment_mode_id.show_bank_account == 'first'">
+                  <span t-esc="partner_bank.acc_number[:o.payment_mode_id.show_bank_account_chars] + '*' * (len(partner_bank.acc_number) - o.payment_mode_id.show_bank_account_chars)"/>
+                </t>
+                <t t-elif="o.payment_mode_id.show_bank_account == 'last'">
+                  <span t-esc="'*' * (len(partner_bank.acc_number) - o.payment_mode_id.show_bank_account_chars) + partner_bank.acc_number[-o.payment_mode_id.show_bank_account_chars:]"/>
+                </t>
+              </p>
+            </t>
+            <p t-if="o.fiscal_position_id.note" name="note">
+              <span t-field="o.fiscal_position_id.note"/>
+            </p>
+            <div id="qrcode" t-if="(o.partner_id.country_id.code in ['BE', 'AT', 'DE', 'FI', 'NL']) and (o.company_id.qr_code) and (o.currency_id.name == 'EUR') and (o.partner_bank_id.acc_number != False)">
+              <p t-if="(o.partner_bank_id.qr_code_valid)">
+                <strong class="text-center">Scan me with your banking app.</strong>
+                <br/>
+                <br/>
+                <img class="border border-dark rounded" t-att-src="o.partner_bank_id.build_qr_code_url(o.residual,(o.reference) if (o.reference) else o.number)"/>
+              </p>
+              <p t-if="(o.partner_bank_id.qr_code_valid == False)">
+                <strong class="text-center">The SEPA QR Code informations are not set correctly.</strong>
+                <br/>
+              </p>
+            </div>
+          </div>
+        </t>
+      </t>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field name="key">account.report_invoice_document_with_payments_copy_1</field>
+    <field name="mode">primary</field>
+    <field eval="False" name="model"/>
+    <field name="name">report_invoice_document_with_payments copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_report_i_6c2f5f06-21dc-4d1b-8810-aff1696d1a9c">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="/t/t/div/div[5]/div/span/p[2]/span" position="replace">
+          <span style="color: rgb(0, 0, 0); white-space: pre-wrap;">IBAN : FR76 3000 4023 2300 0118 3246 578 / BIC : BNPAFRPPXXX</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[5]/div/span/p[1]/font/u" position="replace">
+          <u>Jean Bouteille Diffusion</u>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="studio_customization.report_invoice_docum_16cbd8a8-806d-4400-a8e8-34079d476836" name="inherit_id"/>
+    <field name="key">gen_key.665f72</field>
+    <field name="mode">extension</field>
+    <field eval="False" name="model"/>
+    <field name="name">Odoo Studio: report_invoice_document_with_payments copy(1) customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_product__738fd86d-9ef6-4f96-a2e2-0a38f99b25b2">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='default_code']" position="attributes">
+          <attribute name="attrs">{"invisible": [["product_variant_count","&gt;",1]]}</attribute>
+        </xpath>
+        <xpath expr="//field[@name='default_code']" position="after">
+          <field name="x_studio_certification" string="Certification"/>
+        </xpath>
+        <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="inside">
+          <page name="studio_page_MdaiU" string="Compléments">
+            <group name="studio_group_MdaiU">
+              <group name="studio_group_MdaiU_left">
+                <field name="x_studio_field_DpjSZ" string="Type d'article (complément)" attrs="{&quot;invisible&quot;: []}"/>
+              </group>
+            </group>
+            <group name="studio_group_9CPQP">
+              <group name="studio_group_9CPQP_left" string="Informations techniques equipements">
+                <field name="x_studio_densit" string="Densité" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_viscosit" string="Viscosité" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_format_article_liquide" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_compatible_prsentoir" string="Compatible présentoir" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}" widget="boolean"/>
+                <field name="x_studio_field_compatible_gravity" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_field_compatible_easy" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_compatible_gravit_simple" string="Compatible Gravité Simple" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_type_de_robinet_sur_la_poche" string="Type de robinet sur la poche" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_robinet" string="Conseil de service/robinet" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+              </group>
+              <group name="studio_group_9CPQP_right" string="Informations commerciales">
+                <field name="x_studio_statut" string="Statut" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_famille_de_produit" string="Famille de produit" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_code_variable_de_vente" string="Code variable de vente" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_indication_prix_de_cession_au_l" string="Indication prix de cession au L " attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_tva_consommateur" string="TVA CONSOMMATEUR" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}" widget="percentage"/>
+                <field name="x_studio_prix_de_vente_conseille_consommateur" string="Prix de vente conseillée consommateur " attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_marge_magasin_estime" string="Marge magasin estimée " attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}" widget="percentage"/>
+                <field name="x_studio_distribue_en_gms" string="Distribuée en GMS" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_distribue_en_rseau_sp" string="Distribuée en Réseau Spé" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_ilv_diffrencies" string="ILV Différenciées" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_intgr_offre_sponsoris" string="Intégré offre sponsorisé" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_prcisions_distribution_gographique" string="Précisions distribution géographique" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_lien_fiche_technique" string="Lien fiche technique" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_commentaire_info_commerciale" string="Commentaire info commerciale" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+              </group>
+            </group>
+            <group name="studio_group_nCLxw">
+              <group name="studio_group_nCLxw_left" string="Description du produit">
+                <field name="x_studio_description_du_produit" string="Description du produit"/>
+                <field name="x_studio_conseils_dutilisation" string="Conseils d'utilisation"/>
+                <field name="x_studio_composition" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_allergenes" string="Allergenes" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_conseils_de_conservation" string="Conseils de conservation" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_origine" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_ddm_magasin" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+                <field name="x_studio_ddm_consommateur" attrs="{&quot;invisible&quot;: [[&quot;x_studio_field_DpjSZ&quot;,&quot;!=&quot;,&quot;Produit liquide&quot;]]}"/>
+              </group>
+            </group>
+          </page>
+        </xpath>
+        <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="after">
+          <group name="studio_group_7MWd9">
+      </group>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="product.product_template_only_form_view" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">product.template</field>
+    <field name="name">Odoo Studio: product.template.product.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_product__7e2abb27-b1b5-476e-b630-a131c59985d4">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='display_name']" position="after">
+          <field name="route_ids" widget="many2many_tags"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="product.product_category_list_view" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">product.category</field>
+    <field name="name">Odoo Studio: product.category.list customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_purchase_686f4216-5f13-4efd-bd37-336a244080c1">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="create_date"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="purchase.purchase_order_tree" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">purchase.order</field>
+    <field name="name">Odoo Studio: purchase.order.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_hr_expen_59eee16a-4884-4d2e-b7f6-ba5e57733a92">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='analytic_account_id']" position="replace">
+          <field name="x_studio_vrifi_par_lucien"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="hr_expense.view_expenses_tree" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">hr.expense</field>
+    <field name="name">Odoo Studio: hr.expense.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_sale_ord_e137988d-895f-42ac-a91b-c55e440a8c12">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='commitment_date']" position="replace">
+          <field name="effective_date"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="sale.view_order_tree" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">sale.order</field>
+    <field name="name">Odoo Studio: sale.order.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_report_s_e013a5b4-0133-4808-831d-8eb0b23c77b4">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[1]/span[1]" position="attributes">
+          <attribute name="t-field">line.product_id.display_name</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[1]" position="after">
+          <th>
+            <span>Certification</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[1]" position="after">
+          <td>
+            <span t-field="line.product_id.x_studio_certification"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/t[3]/tr/td" position="attributes">
+          <attribute name="colspan">100</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[1]/span[1]" position="attributes">
+          <attribute name="t-field">line.product_id.description</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[1]/span[1]" position="attributes">
+          <attribute name="t-field">line.name</attribute>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="sale.report_saleorder_document" name="inherit_id"/>
+    <field name="key">gen_key.6112c0</field>
+    <field name="mode">extension</field>
+    <field eval="False" name="model"/>
+    <field name="name">Odoo Studio: report_saleorder_document customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_product__fc655791-11a8-4f4b-8de5-1cd585d06054">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='categ_id']" position="after">
+          <field name="x_studio_certification"/>
+          <xpath expr="//field[@name='barcode']" position="move"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="product.product_normal_form_view" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">product.product</field>
+    <field name="name">Odoo Studio: product.product.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_sale_sub_e07a53f1-319a-4856-9a37-0f3f78e39cf7">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='recurring_next_date']" position="after">
+          <field name="date_start"/>
+          <field name="date"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="sale_subscription.sale_subscription_view_list" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">sale.subscription</field>
+    <field name="name">Odoo Studio: sale.subscription.list customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_project__22c3b3a7-a94d-45ec-8aba-673e954f397a">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//filter[@name='unassigned']" position="after">
+          <filter domain="[[&quot;parent_id.progress&quot;,&quot;!=&quot;,False]]" name="studio_filter_YqdzO" string="Est une sous-tâche"/>
+          <filter domain="[[&quot;tag_ids&quot;,&quot;=&quot;,&quot;Tâche&quot;]]" name="studio_filter_jSQIR" string="est une tache"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="project.view_task_search_form" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">project.task</field>
+    <field name="name">Odoo Studio: project.task.search.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.default_calendar_vie_8358e258-aea1-45b8-b7ca-1bd22ef940a9">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <calendar date_start="date" date_stop="date" string="Default calendar view for account.analytic.line"/>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">primary</field>
+    <field name="model">account.analytic.line</field>
+    <field name="name">Default calendar view for account.analytic.line</field>
+    <field name="priority">16</field>
+    <field name="type">calendar</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.default_gantt_view_f_f7ad4381-5ca7-4928-95f7-1072d160d696">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <gantt date_start="create_date" date_stop="date" string="Default gantt view for account.analytic.line"/>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">primary</field>
+    <field name="model">account.analytic.line</field>
+    <field name="name">Default gantt view for account.analytic.line</field>
+    <field name="priority">16</field>
+    <field name="type">gantt</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_project__ea63c161-087b-4ace-9654-2bb0dcbd4c98">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//calendar[1]" position="attributes">
+          <attribute name="date_start">x_studio_date</attribute>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="project.view_task_calendar" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">project.task</field>
+    <field name="name">Odoo Studio: project.task.calendar customization</field>
+    <field name="priority">99</field>
+    <field name="type">calendar</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_sale_ord_0384b8c1-9b49-4d66-859e-68e29811569e">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='order_line']" position="after">
+          <field name="client_order_ref"/>
+        </xpath>
+        <xpath expr="//search[1]/separator[3]" position="after">
+          <filter domain="[[&quot;partner_id.user_id&quot;,&quot;ilike&quot;,&quot;jarrot&quot;]]" name="studio_filter_7U2fx" string="Client de Remy"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="sale.sale_order_view_search_inherit_quotation" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">sale.order</field>
+    <field name="name">Odoo Studio: sale.order.search.inherit.quotation customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_crm_lead_277fce0d-8617-4bbc-ac6f-b3576075bd43">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='medium_id']" position="after">
+          <field name="tag_ids"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="crm_enterprise.crm_opportunity_view_search" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">crm.lead</field>
+    <field name="name">Odoo Studio: crm.lead.search customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_hr_holid_f71f0855-801f-42cc-9f7e-a54d9f976c21">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//filter[@name='accrual_allocation']" position="after">
+          <filter domain="[[&quot;employee_id.active&quot;,&quot;!=&quot;,True]]" name="studio_filter_vCoJn" string="N'est plus un employé JB"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="hr_holidays.view_hr_leave_allocation_filter" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">hr.leave.allocation</field>
+    <field name="name">Odoo Studio: hr.holidays.filter_allocations customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_product__a94d6a94-3eb2-4128-82d7-76add7da118f">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//search[1]/separator[2]" position="after">
+          <filter domain="[&quot;|&quot;,&quot;|&quot;,&quot;|&quot;,[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;PF002&quot;],[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;M10S10&quot;],[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;M8MI&quot;],[&quot;bom_line_ids.bom_id&quot;,&quot;ilike&quot;,&quot;PF005&quot;]]" name="studio_filter_uTeKZ" string="Composant Gravity"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="stock.product_template_search_form_view_stock" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">product.template</field>
+    <field name="name">Odoo Studio: product.template.search.stock.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.default_graph_view_f_e30d523b-b9d3-49c2-9b01-a205ef4acd89">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <graph string="Transfer">
+        <field name="name" modifiers="{&quot;readonly&quot;: [[&quot;state&quot;, &quot;in&quot;, [&quot;cancel&quot;, &quot;done&quot;]]]}"/>
+      </graph>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">primary</field>
+    <field name="model">stock.picking</field>
+    <field name="name">Default graph view for stock.picking</field>
+    <field name="priority">16</field>
+    <field name="type">graph</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.report_saleorder_eb60e3be-e6ab-45ee-8778-4b471de73112">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <t t-name="sale.report_saleorder_copy_1">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="doc">
+            <t t-call="sale.report_saleorder_document_copy_1" t-lang="doc.partner_id.lang"/>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field name="key">sale.report_saleorder_copy_1</field>
+    <field name="mode">primary</field>
+    <field eval="False" name="model"/>
+    <field name="name">report_saleorder copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.report_saleorder_doc_aa347ce1-0776-4b55-998f-19ebc0feff9b">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <t t-name="sale.report_saleorder_document_copy_1">
+        <t t-call="web.external_layout">
+          <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>
+          <t t-set="address">
+            <div t-field="doc.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+            <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="doc.partner_id.vat"/></p>
+          </t>
+          <t t-if="doc.partner_shipping_id == doc.partner_invoice_id                              and doc.partner_invoice_id != doc.partner_id                              or doc.partner_shipping_id != doc.partner_invoice_id">
+            <t t-set="information_block">
+              <strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Adresse de facturation et de livraison :</strong>
+              <strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Adresse de facturation :</strong>
+              <div t-field="doc.partner_invoice_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+              <t t-if="doc.partner_shipping_id != doc.partner_invoice_id">
+                <strong>Adresse de livraison:</strong>
+                <div t-field="doc.partner_shipping_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+              </t>
+            </t>
+          </t>
+          <div class="page">
+            <div class="oe_structure"/>
+            <h2>
+              <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                <span t-if="doc.state not in ['draft','sent']">Commande n° </span>
+                <span t-if="doc.state in ['draft','sent']">Devis № </span>
+              </t>
+              <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                <span>Facture pro-forma n° </span>
+              </t>
+              <span t-field="doc.name"/>
+            </h2>
+            <div class="row mt32 mb32" id="informations">
+              <div t-if="doc.client_order_ref" class="col-auto mw-100 mb-2">
+                <strong>Votre référence : </strong>
+                <p class="m-0" t-field="doc.client_order_ref"/>
+              </div>
+              <div t-if="doc.commitment_date and doc.state not in ['draft','sent']" class="col-auto mw-100 mb-2">
+                <strong>Date de commande:</strong>
+                <p class="m-0" t-field="doc.commitment_date"/>
+              </div>
+              <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-auto mw-100 mb-2">
+                <strong>Date du devis :</strong>
+                <p class="m-0" t-field="doc.date_order"/>
+              </div>
+              <div t-if="doc.user_id.name" class="col-auto mw-100 mb-2">
+                <strong>Vendeur :</strong>
+                <p class="m-0" t-field="doc.user_id"/>
+              </div>
+              <div name="payment_term" t-if="doc.payment_term_id" class="col-auto mw-100 mb-2">
+                <strong>Conditions de paiement:</strong>
+                <p class="m-0" t-field="doc.payment_term_id"/>
+              </div>
+              <div class="col-3" t-if="doc.incoterm" groups="sale_stock.group_display_incoterm">
+                <strong>Incoterms:</strong>
+                <p t-field="doc.incoterm.code"/>
+              </div>
+              <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-auto mw-100 mb-2">
+                <strong>Date d'Expiration:</strong>
+                <p class="m-0" t-field="doc.validity_date"/>
+              </div>
+            </div>
+            <!-- Is there a discount on at least one line? -->
+            <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
+            <table class="table table-sm o_main_table">
+              <thead>
+                <tr>
+                  <!-- TODO: remove in master -->
+                  <t t-set="colspan" t-value="5"/>
+                  <th class="text-left">Description</th>
+                  <th>
+                    <span>Certification</span>
+                  </th>
+                  <th class="text-right">Quantité</th>
+                  <th class="text-right">Unit of measure</th>
+                  <th class="text-right">Prix unitaire</th>
+                  <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                    <span>Rem.(%)</span>
+                    <!-- TODO: remove in master -->
+                    <t t-set="colspan" t-value="colspan+1"/>
+                  </th>
+                  <th class="text-right">Taxes</th>
+                  <th class="text-right">
+                    <t groups="account.group_show_line_subtotals_tax_excluded">Montant</t>
+                    <t groups="account.group_show_line_subtotals_tax_included">Prix total</t>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="sale_tbody">
+                <t t-set="current_subtotal" t-value="0"/>
+                <t t-foreach="doc.order_line" t-as="line">
+                  <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                  <t t-set="current_subtotal" t-value="current_subtotal + line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                  <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                    <t t-if="not line.display_type">
+                      <td>
+                        <span t-field="line.name"/>
+                      </td>
+                      <td>
+                        <span t-field="line.product_id.x_studio_certification"/>
+                      </td>
+                      <td class="text-right">
+                        <span t-field="line.product_uom_qty"/>
+                      </td>
+                      <td class="text-right">
+                        <span t-field="line.product_uom" groups="uom.group_uom"/>
+                      </td>
+                      <td class="text-right">
+                        <span t-field="line.price_unit"/>
+                      </td>
+                      <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                        <span t-field="line.discount"/>
+                      </td>
+                      <td class="text-right">
+                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), line.tax_id))"/>
+                      </td>
+                      <td class="text-right o_price_total">
+                        <span t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                        <span t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                      </td>
+                    </t>
+                    <t t-if="line.display_type == 'line_section'">
+                      <td colspan="99">
+                        <span t-field="line.name"/>
+                      </td>
+                      <t t-set="current_section" t-value="line"/>
+                      <t t-set="current_subtotal" t-value="0"/>
+                    </t>
+                    <t t-if="line.display_type == 'line_note'">
+                      <td colspan="99">
+                        <span t-field="line.name"/>
+                      </td>
+                    </t>
+                  </tr>
+                  <t t-if="current_section and (line_last or doc.order_line[line_index+1].display_type == 'line_section')">
+                    <tr class="is-subtotal text-right">
+                      <td colspan="100">
+                        <strong class="mr16">Sous-total</strong>
+                        <span t-esc="current_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
+                      </td>
+                    </tr>
+                  </t>
+                </t>
+              </tbody>
+            </table>
+            <div class="clearfix">
+              <div id="total" class="row" name="total">
+                <div t-attf-class="#{'col-4' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                  <table class="table table-sm">
+                    <tr class="border-black o_subtotal" style="">
+                      <td>
+                        <strong>Sous-total</strong>
+                      </td>
+                      <td class="text-right">
+                        <span t-field="doc.amount_untaxed"/>
+                      </td>
+                    </tr>
+                    <t t-foreach="doc.amount_by_group" t-as="amount_by_group">
+                      <tr style="">
+                        <t t-if="amount_by_group[3] == 1 and doc.amount_untaxed == amount_by_group[2]">
+                          <td>
+                            <span t-esc="amount_by_group[0]"/>
+                            <span>&amp;nbsp;<span>sur</span>&amp;nbsp;<t t-esc="amount_by_group[2]" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/></span>
+                          </td>
+                          <td class="text-right o_price_total">
+                            <span t-esc="amount_by_group[1]" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
+                          </td>
+                        </t>
+                        <t t-else="">
+                          <td>
+                            <span t-esc="amount_by_group[0]"/>
+                          </td>
+                          <td class="text-right o_price_total">
+                            <span t-esc="amount_by_group[1]" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
+                          </td>
+                        </t>
+                      </tr>
+                    </t>
+                    <tr class="border-black o_total">
+                      <td>
+                        <strong>Total</strong>
+                      </td>
+                      <td class="text-right">
+                        <span t-field="doc.amount_total"/>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <p t-field="doc.note"/>
+            <p t-if="doc.payment_term_id.note">
+              <span t-field="doc.payment_term_id.note"/>
+            </p>
+            <p id="fiscal_position_remark" t-if="doc.fiscal_position_id and doc.fiscal_position_id.sudo().note">
+              <strong>Remarque sur le régime fiscal :</strong>
+              <span t-field="doc.fiscal_position_id.sudo().note"/>
+            </p>
+            <div t-if="doc.sale_order_option_ids and doc.state in ['draft', 'sent']">
+              <t t-set="has_option_discount" t-value="any(doc.sale_order_option_ids.filtered(lambda o: o.discount != 0.0))"/>
+              <h4>
+                <span>Optional Products</span>
+              </h4>
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th class="text-left">Description</th>
+                    <th t-if="has_option_discount" groups="sale.group_discount_per_so_line" class="text-left"/>
+                    <th class="text-right">Prix unitaire</th>
+                  </tr>
+                </thead>
+                <tbody class="sale_tbody">
+                  <tr t-foreach="doc.sale_order_option_ids" t-as="option">
+                    <td>
+                      <span t-field="option.name"/>
+                    </td>
+                    <td t-if="has_option_discount" groups="sale.group_discount_per_so_line">
+                      <strong t-if="option.discount != 0.0" class="text-info"><t t-esc="((option.discount % 1) and '%s' or '%d') % option.discount"/>% discount
+                            </strong>
+                    </td>
+                    <td>
+                      <strong class="text-right">
+                        <div t-field="option.price_unit" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}" t-att-style="option.discount and 'text-decoration: line-through' or None" t-att-class="option.discount and 'text-danger' or None"/>
+                        <div t-if="option.discount">
+                          <t t-esc="'%.2f' % ((1-option.discount / 100.0) * option.price_unit)"/>
+                        </div>
+                      </strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div t-if="doc.signature" class="mt32 ml16 mr16" name="signature">
+              <div class="offset-8">
+                <strong>Signature</strong>
+              </div>
+              <div class="offset-8">
+                <img t-att-src="image_data_uri(doc.signature)" style="max-height: 4cm; max-width: 8cm;"/>
+              </div>
+              <div class="offset-8 text-center">
+                <p t-field="doc.signed_by"/>
+              </div>
+            </div>
+            <div class="oe_structure"/>
+          </div>
+        </t>
+      </t>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field eval="False" name="inherit_id"/>
+    <field name="key">sale.report_saleorder_document_copy_1</field>
+    <field name="mode">primary</field>
+    <field eval="False" name="model"/>
+    <field name="name">report_saleorder_document copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_report_s_1c68a811-27f5-41c5-809f-bf870f6b05fc">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[5]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[5]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[5]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[5]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[5]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[6]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[6]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[5]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]" position="replace"/>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="studio_customization.report_saleorder_doc_aa347ce1-0776-4b55-998f-19ebc0feff9b" name="inherit_id"/>
+    <field name="key">gen_key.e0a228</field>
+    <field name="mode">extension</field>
+    <field eval="False" name="model"/>
+    <field name="name">Odoo Studio: report_saleorder_document copy(1) customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_request__04339940-f426-49e1-bd1c-c1d00e760a45">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//filter[@name='to_approve']" position="after">
+          <separator name="studio_separator_OxY9i"/>
+          <filter domain="[&quot;&amp;&quot;,&quot;&amp;&quot;,[&quot;create_uid&quot;,&quot;ilike&quot;,&quot;Odoo&quot;],[&quot;state&quot;,&quot;=&quot;,&quot;draft&quot;],[&quot;order_line.product_id.categ_id&quot;,&quot;not ilike&quot;,&quot;Negoce&quot;]]" name="studio_filter_wXEu7" string="Devis OdooBot Non Negoce"/>
+          <filter domain="[&quot;&amp;&quot;,&quot;&amp;&quot;,[&quot;state&quot;,&quot;=&quot;,&quot;draft&quot;],[&quot;create_uid&quot;,&quot;ilike&quot;,&quot;Odoo&quot;],[&quot;order_line.product_id.categ_id&quot;,&quot;ilike&quot;,&quot;Negoce&quot;]]" name="studio_filter_6TxEm" string="Devis OdooBot Negoce"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="purchase.view_purchase_order_filter" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">purchase.order</field>
+    <field name="name">Odoo Studio: request.quotation.select customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_website__da44fc47-1bc2-4f9c-a2c8-020c2cdf3705">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='menu_ids']" position="inside">
+          <tree string="Website menu" editable="bottom">
+            <field name="sequence" widget="handle"/>
+            <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
+            <field name="name"/>
+            <field name="url"/>
+            <field name="new_window"/>
+            <field name="parent_id"/>
+          </tree>
+          <form string="Website Menus Settings">
+            <sheet>
+              <group>
+                <group>
+                  <field name="name"/>
+                  <field name="url"/>
+                  <field name="page_id"/>
+                </group>
+                <group>
+                  <field name="new_window"/>
+                  <field name="sequence"/>
+                  <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
+                </group>
+                <group>
+                  <field name="parent_id"/>
+                </group>
+              </group>
+              <label for="child_id" string="Child Menus"/>
+              <field name="child_id">
+                <tree>
+                  <field name="sequence" widget="handle"/>
+                  <field name="name"/>
+                  <field name="url"/>
+                </tree>
+              </field>
+            </sheet>
+          </form>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="website.website_pages_form_view" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">website.page</field>
+    <field name="name">Odoo Studio: website.page.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record context="{'studio': True}" model="ir.ui.view" id="studio_customization.odoo_studio_stock_mo_a652f4ed-dda2-434d-9169-6f69209b8e11">
+    <field eval="True" name="active"/>
+    <field type="xml" name="arch">
+      <data>
+        <xpath expr="//field[@name='location_dest_id']" position="after">
+          <field name="product_uom_qty"/>
+        </xpath>
+      </data>
+    </field>
+    <field eval="False" name="field_parent"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field ref="stock.view_move_line_tree" name="inherit_id"/>
+    <field eval="False" name="key"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.move.line</field>
+    <field name="name">Odoo Studio: stock.move.line.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+</odoo>

@@ -1,0 +1,26 @@
+<odoo>
+	<data>
+		<report
+			id="sample_report"
+			model="YOUR_MODEL"
+			string="Report Name"
+			report_type="qweb-pdf"
+			name="report.name"
+			file="report.name"
+			attachment_use="False"
+			attachment="object.name + '.pdf'"
+		/>
+		<template id="report.name">
+			<t t-call="report.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="report.external_layout">
+						<div class="page">
+							<h2>Report title</h2>
+							<p>This object's name is <span t-field="o.name"/></p>
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>

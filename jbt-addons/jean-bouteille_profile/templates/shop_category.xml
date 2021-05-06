@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="jb_categories_recursive" inherit_id="website_sale.products">
+        <xpath expr="//div[@id='wrap']" position="before">
+            <t t-if="category">
+                <t t-if="category.image">
+                    <a t-attf-href="{{category.link_background_image}}" target="_blank">
+                        <div class="container-link-image" t-attf-style="background-image: url('data:image/*;base64,{{category.image}}');">
+                            <div style="position:absolute; top:50%; left:15%; color:white;">
+                                <h1 style="font-size:3rem;" t-field="category.image_background_description"/>
+                            </div>
+                        </div>
+                    </a>
+                </t>
+                <t t-else=""/>
+            </t>
+            <t t-else=""/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="stock_production_lot_view_jean-bouteille" model="ir.ui.view">
+        <field name="name">stock.production.lot.jean-bouteille</field>
+        <field name="model">stock.production.lot</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='main_group']" position="after">
+                <group string="EDI Informations">
+                    <group>
+                        <field name="manufacture_date"/>
+                        <field name="ddm_date"/>
+                        <field name="hd_number"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
